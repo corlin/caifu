@@ -1,6 +1,15 @@
+email: me@corlin.cn
+author: me@corlin.cn
+copyright: "(cleft) {currentYear} 财富圈版权所有"
+favicon: "./assets/images/caifu.svg"
 remote_theme: pages-themes/minimal@v0.2.0
-site.github.is_project_page : false
+site.github.is_project_page: false
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
 title: 财富圈
 description: 中国财富圈
