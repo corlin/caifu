@@ -1,1 +1,5 @@
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+title: 财富圈
+description: 中国财富圈
