@@ -3,7 +3,7 @@ author: me@corlin.cn
 # copyright: "(cleft) {currentYear} 财富圈版权所有"
 # favicon: "./assets/images/caifu.svg"
 remote_theme: pages-themes/cayman
-site.github.is_project_page: false
+site.github.is_project_page: "false"
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
