@@ -2,7 +2,7 @@ email: me@corlin.cn
 author: me@corlin.cn
 # copyright: "(cleft) {currentYear} 财富圈版权所有"
 # favicon: "./assets/images/caifu.svg"
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 github.is_project_page: false
 show_downloads: false
 plugins:
