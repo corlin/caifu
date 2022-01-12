@@ -2,7 +2,7 @@
 ---
 title: "测试标题"
 categories:
-  - 测试
+  - future
 tags:
   - test
 ---
