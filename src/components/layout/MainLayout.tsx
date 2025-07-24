@@ -3,6 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import { SITE_CONFIG, ROUTES, CONTACT_INFO, SOCIAL_LINKS } from '../../constants';
 import { MenuItem, MenuGroup, Link, SocialLink } from '../../types';
+import { useAuth } from '../../hooks/useAuth';
+import { useSearch } from '../../hooks/useSearch';
+import { useTheme } from '../../hooks/useTheme';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -89,20 +92,28 @@ const footerLegalLinks: Link[] = [
 ];
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
-  // 这些函数在实际应用中会连接到状态管理和API
+  // 使用我们的自定义Hook
+  const { isAuthenticated, login, logout } = useAuth();
+  const { performSearch } = useSearch();
+  const { theme, toggleTheme } = useTheme();
+  
+  // 处理搜索
   const handleSearch = (query: string) => {
-    console.log('搜索查询:', query);
-    // 实际应用中会重定向到搜索页面或显示搜索结果
+    performSearch(query);
+    // 重定向到搜索页面
+    window.location.href = `${ROUTES.SEARCH}?query=${encodeURIComponent(query)}`;
   };
 
+  // 处理登录
   const handleLogin = () => {
-    console.log('用户点击登录');
     // 实际应用中会重定向到登录页面或显示登录模态框
+    window.location.href = ROUTES.LOGIN;
   };
 
+  // 处理退出登录
   const handleLogout = () => {
-    console.log('用户点击退出');
-    // 实际应用中会调用退出API并清除用户会话
+    logout();
+    // 可以添加重定向到首页或显示退出成功消息
   };
 
   return (
@@ -110,7 +121,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <Header
         logo={SITE_CONFIG.logo}
         menuItems={defaultMenuItems}
-        userAuthenticated={false}
+        userAuthenticated={isAuthenticated}
         onSearch={handleSearch}
         onLogin={handleLogin}
         onLogout={handleLogout}

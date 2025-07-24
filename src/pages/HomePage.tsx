@@ -4,8 +4,8 @@ import MainLayout from '../components/layout/MainLayout';
 // import HeroSection from '../components/sections/HeroSection';
 // import FeatureSection from '../components/sections/FeatureSection';
 // import ContentSection from '../components/sections/ContentSection';
-// import TestimonialSection from '../components/sections/TestimonialSection';
-// import CallToAction from '../components/sections/CallToAction';
+import TestimonialSection from '../components/sections/TestimonialSection';
+import CallToAction from '../components/sections/CallToAction';
 
 // 模拟数据，后续将从API获取
 const mockData = {
@@ -147,27 +147,23 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="section testimonial-section">
-            <div className="container">
-              <div className="section-title">
-                <h2>{data.testimonials.title}</h2>
-              </div>
-              <p>这里是客户评价部分，将在后续任务中实现</p>
-            </div>
-          </div>
+          <TestimonialSection 
+            title={data.testimonials.title}
+            testimonials={data.testimonials.testimonials}
+            autoPlay={data.testimonials.autoPlay}
+            interval={data.testimonials.interval}
+            layout="carousel"
+          />
 
-          <div className="section cta-section">
-            <div className="container">
-              <div className="section-title">
-                <h2>{data.callToAction.title}</h2>
-                <p>{data.callToAction.description}</p>
-              </div>
-              <div className="text-center">
-                <button className="btn btn-primary mr-3">{data.callToAction.primaryButtonText}</button>
-                <button className="btn btn-secondary">{data.callToAction.secondaryButtonText}</button>
-              </div>
-            </div>
-          </div>
+          <CallToAction
+            title={data.callToAction.title}
+            description={data.callToAction.description}
+            primaryButtonText={data.callToAction.primaryButtonText}
+            secondaryButtonText={data.callToAction.secondaryButtonText}
+            onPrimaryAction={() => console.log('Primary action clicked')}
+            onSecondaryAction={() => console.log('Secondary action clicked')}
+            backgroundGradient="linear-gradient(135deg, #0066cc, #004080)"
+          />
         </>
       )}
     </MainLayout>

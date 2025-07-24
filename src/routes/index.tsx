@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ROUTES } from '../constants';
 import HomePage from '../pages/HomePage';
+import SearchPage from '../pages/SearchPage';
 
 // 这些页面将在后续任务中实现
 // import AboutPage from '../pages/AboutPage';
@@ -9,7 +10,6 @@ import HomePage from '../pages/HomePage';
 // import LoginPage from '../pages/LoginPage';
 // import RegisterPage from '../pages/RegisterPage';
 // import ProfilePage from '../pages/ProfilePage';
-// import SearchPage from '../pages/SearchPage';
 // import NotFoundPage from '../pages/NotFoundPage';
 
 const AppRoutes: React.FC = () => {
@@ -23,7 +23,7 @@ const AppRoutes: React.FC = () => {
         {/* <Route path={ROUTES.LOGIN} element={<LoginPage />} /> */}
         {/* <Route path={ROUTES.REGISTER} element={<RegisterPage />} /> */}
         {/* <Route path={ROUTES.PROFILE} element={<ProfilePage />} /> */}
-        {/* <Route path={ROUTES.SEARCH} element={<SearchPage />} /> */}
+        <Route path={ROUTES.SEARCH} element={<SearchPage />} />
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
     </Router>

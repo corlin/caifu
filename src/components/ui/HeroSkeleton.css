@@ -1,0 +1,53 @@
+.hero-skeleton {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.hero-skeleton .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-skeleton-content {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.hero-skeleton-title {
+  margin-bottom: 20px;
+}
+
+.hero-skeleton-description {
+  margin-bottom: 10px;
+}
+
+.hero-skeleton-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hero-skeleton-image {
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .hero-skeleton .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero-skeleton-content {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  
+  .hero-skeleton-image {
+    width: 50%;
+  }
+}

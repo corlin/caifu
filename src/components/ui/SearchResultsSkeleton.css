@@ -1,0 +1,31 @@
+.search-results-skeleton {
+  padding: 20px;
+  width: 100%;
+}
+
+.search-results-skeleton-title {
+  margin-bottom: 20px;
+}
+
+.search-results-skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-results-skeleton-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results-skeleton-item-title {
+  margin-bottom: 10px;
+}
+
+.search-results-skeleton-item-excerpt {
+  margin-bottom: 5px;
+}
+
+.search-results-skeleton-item-url {
+  margin-top: 10px;
+}

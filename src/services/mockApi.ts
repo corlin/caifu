@@ -159,25 +159,64 @@ export const mockApiService = {
   // 搜索API
   search: async (query: string): Promise<any> => {
     await delay(500);
-    // 模拟搜索结果
+    
+    // 模拟搜索失败的情况（用于测试错误处理）
+    if (query.toLowerCase() === 'error') {
+      throw new Error('搜索服务暂时不可用');
+    }
+    
+    // 模拟无结果的情况
+    if (query.toLowerCase() === 'noresults') {
+      return {
+        results: [],
+        totalResults: 0,
+        page: 1,
+        totalPages: 0
+      };
+    }
+    
+    // 生成模拟搜索结果
+    const mockResults = [
+      {
+        id: '1',
+        title: `${query} 相关产品介绍`,
+        excerpt: `这是关于${query}的详细产品介绍，包含了产品的特点、用途和优势...`,
+        url: `/products/${query.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'product'
+      },
+      {
+        id: '2',
+        title: `如何使用${query}`,
+        excerpt: `本文详细介绍了${query}的使用方法和注意事项，帮助您更好地使用我们的产品...`,
+        url: `/guide/${query.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'guide'
+      },
+      {
+        id: '3',
+        title: `${query}常见问题解答`,
+        excerpt: `我们收集了用户关于${query}最常见的问题，并提供了专业的解答...`,
+        url: `/faq/${query.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'faq'
+      },
+      {
+        id: '4',
+        title: `${query}最新动态`,
+        excerpt: `了解${query}的最新发展和动态，掌握行业前沿信息...`,
+        url: `/news/${query.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'news'
+      },
+      {
+        id: '5',
+        title: `${query}用户评价`,
+        excerpt: `查看其他用户对${query}的真实评价和使用体验分享...`,
+        url: `/reviews/${query.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'review'
+      }
+    ];
+    
     return {
-      results: [
-        {
-          id: '1',
-          title: `搜索结果 1 for "${query}"`,
-          excerpt: '这是搜索结果1的摘要...',
-          url: '/result/1',
-          type: 'page'
-        },
-        {
-          id: '2',
-          title: `搜索结果 2 for "${query}"`,
-          excerpt: '这是搜索结果2的摘要...',
-          url: '/result/2',
-          type: 'post'
-        }
-      ],
-      totalResults: 2,
+      results: mockResults,
+      totalResults: mockResults.length,
       page: 1,
       totalPages: 1
     };

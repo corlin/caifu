@@ -185,3 +185,23 @@ export interface ErrorResponse {
   message: string;
   details?: any;
 }
+
+// 搜索结果
+export interface SearchResult {
+  id: string;
+  title: string;
+  excerpt: string;
+  url: string;
+  type: 'page' | 'post' | 'product' | 'guide' | 'faq' | 'news' | 'review';
+}
+
+// 搜索结果组件属性
+export interface SearchResultsProps {
+  query: string;
+  results: SearchResult[];
+  totalResults: number;
+  isLoading: boolean;
+  error?: string;
+  onResultClick?: (result: SearchResult) => void;
+  onRetry?: () => void;
+}

@@ -1,0 +1,39 @@
+.cta-skeleton {
+  padding: 60px 0;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.cta-skeleton .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-skeleton-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.cta-skeleton-title {
+  margin-bottom: 20px;
+}
+
+.cta-skeleton-description {
+  margin-bottom: 5px;
+}
+
+.cta-skeleton-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .cta-skeleton-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

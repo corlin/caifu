@@ -1,5 +1,6 @@
 import React from 'react';
 import './FeatureSection.css';
+import { FeatureSkeleton } from '../ui';
 
 export interface Feature {
   id: string;
@@ -13,13 +14,19 @@ export interface FeatureSectionProps {
   title: string;
   features: Feature[];
   layout: 'grid' | 'cards' | 'list';
+  isLoading?: boolean;
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({ 
   title, 
   features, 
-  layout = 'grid' 
+  layout = 'grid',
+  isLoading = false
 }) => {
+  if (isLoading) {
+    return <FeatureSkeleton layout={layout} count={features?.length || 3} />;
+  }
+
   return (
     <section className={`feature-section feature-section-${layout}`}>
       <div className="container">
