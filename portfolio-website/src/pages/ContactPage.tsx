@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
       icon: Mail,
       label: '邮箱',
       value: 'info@caifu.social',
-      href: 'mailto:info@caifu.social,
+      href: 'mailto:info@caifu.social',
       color: 'text-blue-600'
     },
     {
@@ -48,14 +48,14 @@ const ContactPage: React.FC = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/yourprofile',
-      href: 'https://linkedin.com/in/yourprofile',
+      value: 'linkedin.com/in/corlin-chen-20160424/',
+      href: 'https://linkedin.com/in/corlin-chen-20160424/',
       color: 'text-blue-700'
     },
     {
       icon: Twitter,
       label: 'Twitter',
-      value: '@yourusername',
+      value: '@corlin',
       href: 'https://twitter.com/corlin',
       color: 'text-sky-500'
     }
