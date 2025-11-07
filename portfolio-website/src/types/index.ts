@@ -6,6 +6,10 @@ export interface TechProject {
   techStack: string[];
   thumbnail: string;
   description: string;
+  technicalDetails?: string;
+  architecture?: string;
+  challenges?: string[];
+  solutions?: string[];
   year: number;
   featured: boolean;
   githubUrl?: string;
