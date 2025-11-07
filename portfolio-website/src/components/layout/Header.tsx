@@ -9,6 +9,7 @@ const Header: React.FC = () => {
   const navItems = [
     { path: '/', label: '首页' },
     { path: '/projects', label: '项目' },
+    { path: '/lab', label: '实验室' },
     { path: '/about', label: '关于' },
     { path: '/contact', label: '联系' },
   ];
