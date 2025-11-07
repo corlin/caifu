@@ -50,3 +50,42 @@ export interface TechStack {
   databases: string[];
   cloud: string[];
 }
+
+export interface TechAchievement {
+  title: string;
+  organization: string;
+  year: number;
+  description?: string;
+  type: 'award' | 'certification' | 'publication' | 'speaking' | 'contribution';
+}
+
+export interface TechRecommendation {
+  content: string;
+  author: string;
+  position: string;
+  company: string;
+  avatar?: string;
+  projectContext?: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  verificationUrl?: string;
+}
+
+export interface TechEvolution {
+  period: string;
+  focus: string;
+  technologies: string[];
+  milestone: string;
+}
+
+export interface LearningPath {
+  phase: string;
+  description: string;
+  skills: string[];
+  projects?: string[];
+}
