@@ -31,7 +31,22 @@ npm run preview
 
 ## 部署到Cloudflare Pages
 
-### 方法1: 使用 Wrangler CLI（推荐）
+### 快速部署（推荐）
+
+使用提供的部署脚本一键部署：
+
+```bash
+# 运行部署脚本
+./deploy.sh
+```
+
+这个脚本会自动：
+1. 清理旧的构建文件
+2. 运行构建命令
+3. 显示构建信息
+4. 部署到 Cloudflare Pages
+
+### 方法1: 使用 Wrangler CLI
 
 ```bash
 # 安装Wrangler
@@ -51,6 +66,23 @@ wrangler pages deploy dist --project-name=caifu
 ```
 
 部署成功后会显示访问URL，例如：`https://abc123.my-portfolio.pages.dev`
+
+### 部署后测试
+
+使用测试脚本验证部署：
+
+```bash
+# 运行测试脚本（替换为你的实际 URL）
+./test-deployment.sh https://your-site.pages.dev
+```
+
+这会自动检查：
+- 网站可访问性
+- 主要路由
+- 客户端路由支持
+- 静态资源
+- 安全头部
+- 页面加载时间
 
 ### 方法2: Git 集成自动部署
 
@@ -107,7 +139,14 @@ VITE_GITHUB_URL=https://github.com/yourusername
 3. 输入域名并按提示配置 DNS
 4. Cloudflare 自动提供免费 SSL 证书
 
-详细部署指南请查看项目文档。
+### 部署文档
+
+- **快速开始**: `DEPLOYMENT-SUMMARY.md` - 部署准备完成总结
+- **快速参考**: `README-DEPLOYMENT.md` - 快速部署指南
+- **详细指南**: `.kiro/specs/minimalist-portfolio-website/deployment-guide.md` - 完整部署文档
+- **验证清单**: `VALIDATION-CHECKLIST.md` - 部署后验证清单
+- **优化指南**: `POST-DEPLOYMENT-GUIDE.md` - 部署后优化指南
+- **环境变量**: `.env.example` - 环境变量模板
 
 ## 项目结构
 
