@@ -31,19 +31,7 @@ npm run preview
 
 ## 部署到Cloudflare Pages
 
-### 方法1: 通过Cloudflare Dashboard
-
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. 进入 Pages 部分
-3. 点击 "Create a project"
-4. 连接你的 Git 仓库（GitHub/GitLab）
-5. 配置构建设置：
-   - **构建命令**: `npm run build`
-   - **构建输出目录**: `dist`
-   - **Node版本**: 18 或更高
-6. 点击 "Save and Deploy"
-
-### 方法2: 使用Wrangler CLI
+### 方法1: 使用 Wrangler CLI（推荐）
 
 ```bash
 # 安装Wrangler
@@ -52,19 +40,74 @@ npm install -g wrangler
 # 登录Cloudflare
 wrangler login
 
-# 部署
+# 构建项目
 npm run build
-wrangler pages deploy dist
+
+# 部署到新项目
+wrangler pages deploy dist --project-name=my-portfolio
+
+# 或部署到已有项目
+wrangler pages deploy dist --project-name=caifu
 ```
 
-### 环境变量（可选）
+部署成功后会显示访问URL，例如：`https://abc123.my-portfolio.pages.dev`
 
-在Cloudflare Pages设置中添加以下环境变量：
+### 方法2: Git 集成自动部署
 
+1. 推送代码到 GitHub
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+3. 进入 "Workers & Pages" > "Create application" > "Pages"
+4. 点击 "Connect to Git" 并授权访问 GitHub
+5. 选择要部署的仓库
+6. 配置构建设置：
+   - **项目名称**: 输入项目名称
+   - **生产分支**: `main`
+   - **框架预设**: Vite
+   - **构建命令**: `npm run build`
+   - **构建输出目录**: `dist`
+   - **根目录**: `portfolio-website`（如果在子目录）
+7. 点击 "Save and Deploy"
+
+之后每次推送到 `main` 分支都会自动触发部署。
+
+### 配置客户端路由支持
+
+创建 `public/_redirects` 文件：
 ```
-VITE_SITE_URL=https://yoursite.pages.dev
+/*    /index.html   200
+```
+
+### 环境变量配置
+
+在 Cloudflare Pages 设置中添加环境变量：
+
+**本地开发** - 创建 `.env` 文件：
+```env
+VITE_SITE_URL=http://localhost:5173
 VITE_CONTACT_EMAIL=your@email.com
+VITE_GITHUB_URL=https://github.com/yourusername
 ```
+
+**生产环境** - 在 Cloudflare Dashboard 中配置：
+1. 进入 Pages 项目 > Settings > Environment variables
+2. 添加变量：
+   - `VITE_SITE_URL`: `https://yoursite.pages.dev`
+   - `VITE_CONTACT_EMAIL`: `your@email.com`
+
+### 自定义域名（可选）
+
+1. 在 Pages 项目中选择 "Custom domains"
+2. 点击 "Set up a custom domain"
+3. 输入域名并按提示配置 DNS
+4. Cloudflare 自动提供免费 SSL 证书
+
+详细部署指南请查看项目文档。
 
 ## 项目结构
 
@@ -84,9 +127,13 @@ src/
 - ✅ 技术栈展示
 - ✅ 专业领域介绍
 - ✅ 社交媒体链接
-- 🚧 项目展示（开发中）
-- 🚧 博客系统（开发中）
-- 🚧 联系表单（开发中）
+- ✅ 项目展示和筛选功能
+- ✅ 项目详情模态框
+- ✅ 流畅的动画效果
+- ✅ Cloudflare Pages 部署支持
+- 🚧 博客系统（计划中）
+- 🚧 联系表单（计划中）
+- 🚧 技术实验室页面（计划中）
 
 ## License
 
