@@ -121,16 +121,16 @@ wrangler pages deploy dist --project-name=caifu
 
 **本地开发** - 创建 `.env` 文件：
 ```env
-VITE_SITE_URL=http://localhost:5173
-VITE_CONTACT_EMAIL=your@email.com
-VITE_GITHUB_URL=https://github.com/yourusername
+VITE_SITE_URL=https://caifu.social
+VITE_CONTACT_EMAIL=info@caifu.social
+VITE_GITHUB_URL=https://github.com/corlin
 ```
 
 **生产环境** - 在 Cloudflare Dashboard 中配置：
 1. 进入 Pages 项目 > Settings > Environment variables
 2. 添加变量：
-   - `VITE_SITE_URL`: `https://yoursite.pages.dev`
-   - `VITE_CONTACT_EMAIL`: `your@email.com`
+   - `VITE_SITE_URL`: `https://caifu.social`
+   - `VITE_CONTACT_EMAIL`: `info@caifu.social`
 
 ### 自定义域名（可选）
 

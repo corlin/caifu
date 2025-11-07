@@ -128,10 +128,10 @@
 
 2. **添加生产环境变量**
    ```
-   VITE_SITE_URL=https://your-site.pages.dev
-   VITE_CONTACT_EMAIL=your@email.com
-   VITE_GITHUB_URL=https://github.com/yourusername
-   VITE_LINKEDIN_URL=https://linkedin.com/in/yourusername
+   VITE_SITE_URL=https://caifu.social
+   VITE_CONTACT_EMAIL=info@caifu.social
+   VITE_GITHUB_URL=https://github.com/corlin
+   VITE_LINKEDIN_URL=https://linkedin.com/in/corlin-chen-20160424/
    ```
 
 3. **重新部署**

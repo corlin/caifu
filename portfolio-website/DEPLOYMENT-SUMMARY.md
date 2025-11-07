@@ -112,9 +112,9 @@ wrangler pages deploy dist --project-name=caifu
 在 Cloudflare Dashboard 中配置：
 ```
 VITE_SITE_URL=https://caifu.pages.dev
-VITE_CONTACT_EMAIL=your@email.com
-VITE_GITHUB_URL=https://github.com/yourusername
-VITE_LINKEDIN_URL=https://linkedin.com/in/yourusername
+VITE_CONTACT_EMAIL=corlin@caifu.social
+VITE_GITHUB_URL=https://github.com/corlin
+VITE_LINKEDIN_URL=https://linkedin.com/in/corlin-chen-20160424/
 ```
 
 ### 自定义域名（可选）

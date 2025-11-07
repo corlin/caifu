@@ -6,7 +6,7 @@ export const personalInfo = {
   bio: '专注于大语言模型应用开发、智能Agent系统设计和RAG技术实践。致力于将前沿AI技术转化为实用的解决方案，帮助企业和开发者构建智能化应用。',
   experience: '5+ 年AI/ML开发经验',
   location: '中国',
-  email: 'contact@example.com'
+  email: 'info@caifu.social'
 };
 
 export const professionalBackground = {

@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
         {/* Social Links */}
         <div className="flex justify-center space-x-4 mb-8">
           <a
-            href="https://github.com"
+            href="https://github.com/corlin"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/corlin-chen-20160424/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:contact@example.com"
+            href="mailto:info@caifu.social"
             className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
             aria-label="Email"
           >

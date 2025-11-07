@@ -34,15 +34,15 @@ const ContactPage: React.FC = () => {
     {
       icon: Mail,
       label: '邮箱',
-      value: 'contact@example.com',
-      href: 'mailto:contact@example.com',
+      value: 'info@caifu.social',
+      href: 'mailto:info@caifu.social,
       color: 'text-blue-600'
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/yourusername',
-      href: 'https://github.com/yourusername',
+      value: 'github.com/corlin',
+      href: 'https://github.com/corlin',
       color: 'text-gray-900'
     },
     {
@@ -56,7 +56,7 @@ const ContactPage: React.FC = () => {
       icon: Twitter,
       label: 'Twitter',
       value: '@yourusername',
-      href: 'https://twitter.com/yourusername',
+      href: 'https://twitter.com/corlin',
       color: 'text-sky-500'
     }
   ];

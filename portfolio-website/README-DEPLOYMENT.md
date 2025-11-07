@@ -89,8 +89,8 @@ wrangler pages deploy dist --project-name=caifu
 ## 环境变量（可选）
 
 如需配置环境变量，在 Cloudflare Dashboard 中添加：
-- `VITE_SITE_URL`: https://caifu.pages.dev
-- `VITE_CONTACT_EMAIL`: your@email.com
+- `VITE_SITE_URL`: https://caifu.social
+- `VITE_CONTACT_EMAIL`: info@caifu.social
 
 ## 故障排查
 
