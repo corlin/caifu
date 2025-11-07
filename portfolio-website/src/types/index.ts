@@ -4,7 +4,7 @@ export interface TechProject {
   subtitle?: string;
   category: TechCategory;
   techStack: string[];
-  thumbnail: string;
+  thumbnail?: string;
   description: string;
   technicalDetails?: string;
   architecture?: string;

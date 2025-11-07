@@ -2,13 +2,53 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, FileText } from 'lucide-react';
 import type { TechProject } from '../../types';
+import { TechCategory } from '../../types';
+import LazyImage from '../ui/LazyImage';
 
 interface ProjectCardProps {
   project: TechProject;
   onClick?: () => void;
 }
 
+// 根据项目类别返回不同的渐变背景和图标
+const getCategoryStyle = (category: string) => {
+  const styles: Record<string, { gradient: string; icon: string }> = {
+    [TechCategory.LLM_APPLICATION]: {
+      gradient: 'from-blue-500 to-cyan-600',
+      icon: '🤖',
+    },
+    [TechCategory.AGENT_DEVELOPMENT]: {
+      gradient: 'from-purple-500 to-pink-600',
+      icon: '🎯',
+    },
+    [TechCategory.RAG_SYSTEM]: {
+      gradient: 'from-green-500 to-teal-600',
+      icon: '📚',
+    },
+    [TechCategory.MODEL_FINETUNING]: {
+      gradient: 'from-orange-500 to-red-600',
+      icon: '⚙️',
+    },
+    [TechCategory.ML_INFRASTRUCTURE]: {
+      gradient: 'from-indigo-500 to-blue-600',
+      icon: '🏗️',
+    },
+    [TechCategory.OPEN_SOURCE]: {
+      gradient: 'from-gray-600 to-gray-800',
+      icon: '💻',
+    },
+    [TechCategory.RESEARCH]: {
+      gradient: 'from-yellow-500 to-orange-600',
+      icon: '🔬',
+    },
+  };
+
+  return styles[category] || { gradient: 'from-blue-500 to-purple-600', icon: '🚀' };
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
+  const categoryStyle = getCategoryStyle(project.category);
+
   return (
     <motion.div
       className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer group"
@@ -17,12 +57,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={onClick}
     >
       {/* 项目缩略图 */}
-      <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white text-6xl opacity-20">🚀</span>
-        </div>
+      <div className="relative h-48 overflow-hidden">
+        {project.thumbnail ? (
+          <LazyImage
+            src={project.thumbnail}
+            alt={project.title}
+            className="h-48"
+            aspectRatio="auto"
+          />
+        ) : (
+          <div className={`h-48 bg-gradient-to-br ${categoryStyle.gradient}`}>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-white text-6xl opacity-20">{categoryStyle.icon}</span>
+            </div>
+          </div>
+        )}
         {project.featured && (
-          <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold">
+          <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold z-10">
             精选
           </div>
         )}

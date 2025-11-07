@@ -11,13 +11,12 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
+import LoadingIndicator from './components/ui/LoadingIndicator';
+
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-[60vh] flex items-center justify-center">
-    <div className="flex flex-col items-center gap-4">
-      <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-gray-600 text-sm">加载中...</p>
-    </div>
+  <div className="min-h-[60vh]">
+    <LoadingIndicator size="md" text="加载中..." />
   </div>
 );
 

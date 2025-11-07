@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import { projects } from '../data/projects';
 import ProjectGrid from '../components/projects/ProjectGrid';
 import ProjectModal from '../components/projects/ProjectModal';
 import PageTransition from '../components/animations/PageTransition';
 import ScrollReveal from '../components/animations/ScrollReveal';
+import { ProjectGridSkeleton } from '../components/ui/Skeleton';
 import type { TechProject } from '../types';
 import { TechCategory } from '../types';
 
@@ -75,10 +76,12 @@ const ProjectsPage: React.FC = () => {
 
         {/* 项目网格 */}
         <ScrollReveal delay={0.3}>
-          <ProjectGrid 
-            projects={filteredProjects} 
-            onProjectClick={setSelectedProject}
-          />
+          <Suspense fallback={<ProjectGridSkeleton count={6} />}>
+            <ProjectGrid 
+              projects={filteredProjects} 
+              onProjectClick={setSelectedProject}
+            />
+          </Suspense>
         </ScrollReveal>
 
         {/* 项目详情模态框 */}
