@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
+import PageTransition from '../components/animations/PageTransition';
 
 const NotFoundPage = () => {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4">
-      <motion.div
+    <PageTransition>
+      <div className="min-h-[80vh] flex items-center justify-center px-4">
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -80,8 +82,9 @@ const NotFoundPage = () => {
             </div>
           </div>
         </motion.div>
-      </motion.div>
-    </div>
+        </motion.div>
+      </div>
+    </PageTransition>
   );
 };
 

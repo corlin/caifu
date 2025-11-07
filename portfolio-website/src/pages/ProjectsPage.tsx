@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { projects } from '../data/projects';
 import ProjectGrid from '../components/projects/ProjectGrid';
 import ProjectModal from '../components/projects/ProjectModal';
+import PageTransition from '../components/animations/PageTransition';
+import ScrollReveal from '../components/animations/ScrollReveal';
 import type { TechProject } from '../types';
 import { TechCategory } from '../types';
 
@@ -35,49 +37,57 @@ const ProjectsPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-12">
-      {/* 页面标题和介绍 */}
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">技术项目</h1>
-        <p className="text-lg text-gray-600 max-w-3xl">
-          探索我在AI/LLM领域的技术实践，涵盖大语言模型应用、智能代理开发、RAG系统和模型微调等方向。
-        </p>
+    <PageTransition>
+      <div className="py-12">
+        {/* 页面标题和介绍 */}
+        <ScrollReveal>
+          <div className="mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">技术项目</h1>
+            <p className="text-lg text-gray-600 max-w-3xl">
+              探索我在AI/LLM领域的技术实践，涵盖大语言模型应用、智能代理开发、RAG系统和模型微调等方向。
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* 分类筛选器 */}
+        <ScrollReveal delay={0.2}>
+          <div className="mb-8">
+            <div className="flex flex-wrap gap-3">
+              {availableCategories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {categoryLabels[category]}
+                </button>
+              ))}
+            </div>
+            <p className="text-sm text-gray-500 mt-3">
+              共 {filteredProjects.length} 个项目
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* 项目网格 */}
+        <ScrollReveal delay={0.3}>
+          <ProjectGrid 
+            projects={filteredProjects} 
+            onProjectClick={setSelectedProject}
+          />
+        </ScrollReveal>
+
+        {/* 项目详情模态框 */}
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
       </div>
-
-      {/* 分类筛选器 */}
-      <div className="mb-8">
-        <div className="flex flex-wrap gap-3">
-          {availableCategories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-              }`}
-            >
-              {categoryLabels[category]}
-            </button>
-          ))}
-        </div>
-        <p className="text-sm text-gray-500 mt-3">
-          共 {filteredProjects.length} 个项目
-        </p>
-      </div>
-
-      {/* 项目网格 */}
-      <ProjectGrid 
-        projects={filteredProjects} 
-        onProjectClick={setSelectedProject}
-      />
-
-      {/* 项目详情模态框 */}
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-      />
-    </div>
+    </PageTransition>
   );
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import PageTransition from '../components/animations/PageTransition';
+import ScrollReveal from '../components/animations/ScrollReveal';
 
 const HomePage: React.FC = () => {
   const techStack = {
@@ -12,9 +14,10 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="py-20 text-center">
+    <PageTransition>
+      <div className="space-y-16">
+        {/* Hero Section */}
+        <section className="py-20 text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
           AI技术专家
         </h1>
@@ -66,129 +69,152 @@ const HomePage: React.FC = () => {
 
       {/* Tech Stack Section */}
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          技术栈
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            技术栈
+          </h2>
+        </ScrollReveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              编程语言
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {techStack.languages.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+          <ScrollReveal delay={0.1}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                编程语言
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {techStack.languages.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              框架与库
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {techStack.frameworks.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+          <ScrollReveal delay={0.2}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                框架与库
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {techStack.frameworks.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              AI工具
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {techStack.aiTools.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+          <ScrollReveal delay={0.3}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                AI工具
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {techStack.aiTools.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              数据库
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {techStack.databases.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+          <ScrollReveal delay={0.4}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                数据库
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {techStack.databases.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              云服务
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {techStack.cloud.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+          <ScrollReveal delay={0.5}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                云服务
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {techStack.cloud.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Specialization Section */}
       <section className="py-12 bg-gray-50 -mx-4 px-4 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          专业领域
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            专业领域
+          </h2>
+        </ScrollReveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          <div className="text-center">
-            <div className="text-4xl mb-3">🤖</div>
-            <h3 className="font-semibold text-gray-900 mb-2">LLM应用</h3>
-            <p className="text-sm text-gray-600">
-              大语言模型集成与应用开发
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">🎯</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Agent开发</h3>
-            <p className="text-sm text-gray-600">
-              智能代理系统设计与实现
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">📚</div>
-            <h3 className="font-semibold text-gray-900 mb-2">RAG系统</h3>
-            <p className="text-sm text-gray-600">
-              检索增强生成系统构建
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">⚙️</div>
-            <h3 className="font-semibold text-gray-900 mb-2">模型微调</h3>
-            <p className="text-sm text-gray-600">
-              模型优化与定制化训练
-            </p>
-          </div>
+          <ScrollReveal delay={0.1} direction="up">
+            <div className="text-center">
+              <div className="text-4xl mb-3">🤖</div>
+              <h3 className="font-semibold text-gray-900 mb-2">LLM应用</h3>
+              <p className="text-sm text-gray-600">
+                大语言模型集成与应用开发
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2} direction="up">
+            <div className="text-center">
+              <div className="text-4xl mb-3">🎯</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Agent开发</h3>
+              <p className="text-sm text-gray-600">
+                智能代理系统设计与实现
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.3} direction="up">
+            <div className="text-center">
+              <div className="text-4xl mb-3">📚</div>
+              <h3 className="font-semibold text-gray-900 mb-2">RAG系统</h3>
+              <p className="text-sm text-gray-600">
+                检索增强生成系统构建
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.4} direction="up">
+            <div className="text-center">
+              <div className="text-4xl mb-3">⚙️</div>
+              <h3 className="font-semibold text-gray-900 mb-2">模型微调</h3>
+              <p className="text-sm text-gray-600">
+                模型优化与定制化训练
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
-    </div>
+      </div>
+    </PageTransition>
   );
 };
 

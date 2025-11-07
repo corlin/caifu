@@ -23,6 +23,7 @@ import {
   recommendations
 } from '../data/aboutData';
 import Achievements from '../components/about/Achievements';
+import PageTransition from '../components/animations/PageTransition';
 
 const AboutPage: React.FC = () => {
   const iconMap: Record<string, React.ReactNode> = {
@@ -33,8 +34,9 @@ const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <PageTransition>
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -327,8 +329,9 @@ const AboutPage: React.FC = () => {
             certifications={certifications}
           />
         </motion.div>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Twitter, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import PageTransition from '../components/animations/PageTransition';
+import ScrollReveal from '../components/animations/ScrollReveal';
 
 interface FormData {
   name: string;
@@ -169,8 +171,9 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <PageTransition>
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -188,12 +191,9 @@ const ContactPage: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">联系方式</h2>
+          <ScrollReveal direction="left" delay={0.2}>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">联系方式</h2>
             <p className="text-gray-600 mb-8">
               您可以通过以下方式与我联系。无论是技术讨论、项目合作还是咨询建议，我都很乐意与您交流。
             </p>
@@ -251,15 +251,13 @@ const ContactPage: React.FC = () => {
                 </li>
               </ul>
             </motion.div>
-          </motion.div>
+            </div>
+          </ScrollReveal>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">发送消息</h2>
+          <ScrollReveal direction="right" delay={0.4}>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">发送消息</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
@@ -415,10 +413,12 @@ const ContactPage: React.FC = () => {
                 </motion.div>
               )}
             </form>
-          </motion.div>
+            </div>
+          </ScrollReveal>
+        </div>
         </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 
