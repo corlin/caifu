@@ -1,0 +1,48 @@
+export interface TechProject {
+  id: string;
+  title: string;
+  subtitle?: string;
+  category: TechCategory;
+  techStack: string[];
+  thumbnail: string;
+  description: string;
+  year: number;
+  featured: boolean;
+  githubUrl?: string;
+  demoUrl?: string;
+  documentation?: string;
+}
+
+export const TechCategory = {
+  LLM_APPLICATION: 'llm-application',
+  AGENT_DEVELOPMENT: 'agent-development',
+  RAG_SYSTEM: 'rag-system',
+  MODEL_FINETUNING: 'model-finetuning',
+  ML_INFRASTRUCTURE: 'ml-infrastructure',
+  OPEN_SOURCE: 'open-source',
+  RESEARCH: 'research'
+} as const;
+
+export type TechCategory = typeof TechCategory[keyof typeof TechCategory];
+
+export interface TechExpertInfo {
+  name: string;
+  title: string;
+  specialization: string[];
+  bio: string;
+  techStack: TechStack;
+  social: {
+    email: string;
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+  };
+}
+
+export interface TechStack {
+  languages: string[];
+  frameworks: string[];
+  aiTools: string[];
+  databases: string[];
+  cloud: string[];
+}
