@@ -1,11 +1,3 @@
-name = "portfolio-website"
+name = "caifu"
 compatibility_date = "2024-01-01"
-
-[build]
-command = "npm run build"
-destination = "dist"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+pages_build_output_dir = "dist"
