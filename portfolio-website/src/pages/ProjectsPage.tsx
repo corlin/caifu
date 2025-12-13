@@ -7,21 +7,23 @@ import ScrollReveal from '../components/animations/ScrollReveal';
 import { ProjectGridSkeleton } from '../components/ui/Skeleton';
 import type { TechProject } from '../types';
 import { TechCategory } from '../types';
-
-const categoryLabels: Record<TechCategory | 'all', string> = {
-  all: '全部',
-  [TechCategory.LLM_APPLICATION]: 'LLM应用',
-  [TechCategory.AGENT_DEVELOPMENT]: 'Agent开发',
-  [TechCategory.RAG_SYSTEM]: 'RAG系统',
-  [TechCategory.MODEL_FINETUNING]: '模型微调',
-  [TechCategory.ML_INFRASTRUCTURE]: 'ML基础设施',
-  [TechCategory.OPEN_SOURCE]: '开源项目',
-  [TechCategory.RESEARCH]: '研究项目'
-};
+import { useTranslation } from '../i18n/hooks/useTranslation';
 
 const ProjectsPage: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState<TechProject | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<TechCategory | 'all'>('all');
+
+  const categoryLabels: Record<TechCategory | 'all', string> = {
+    all: t('projects.categories.all'),
+    [TechCategory.LLM_APPLICATION]: t('projects.categories.llmApplication'),
+    [TechCategory.AGENT_DEVELOPMENT]: t('projects.categories.agentDevelopment'),
+    [TechCategory.RAG_SYSTEM]: t('projects.categories.ragSystem'),
+    [TechCategory.MODEL_FINETUNING]: t('projects.categories.modelFinetuning'),
+    [TechCategory.ML_INFRASTRUCTURE]: t('projects.categories.mlInfrastructure'),
+    [TechCategory.OPEN_SOURCE]: t('projects.categories.openSource'),
+    [TechCategory.RESEARCH]: t('projects.categories.research')
+  };
 
   // 筛选项目
   const filteredProjects = useMemo(() => {
@@ -43,9 +45,9 @@ const ProjectsPage: React.FC = () => {
         {/* 页面标题和介绍 */}
         <ScrollReveal>
           <div className="mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">技术项目</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('projects.title')}</h1>
             <p className="text-lg text-gray-600 max-w-3xl">
-              探索我在AI/LLM领域的技术实践，涵盖大语言模型应用、智能代理开发、RAG系统和模型微调等方向。
+              {t('projects.description')}
             </p>
           </div>
         </ScrollReveal>
@@ -69,7 +71,7 @@ const ProjectsPage: React.FC = () => {
               ))}
             </div>
             <p className="text-sm text-gray-500 mt-3">
-              共 {filteredProjects.length} 个项目
+              {t('projects.projectCount', { count: filteredProjects.length.toString() })}
             </p>
           </div>
         </ScrollReveal>

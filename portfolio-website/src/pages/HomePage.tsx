@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import PageTransition from '../components/animations/PageTransition';
 import ScrollReveal from '../components/animations/ScrollReveal';
+import { useTranslation } from '../i18n/hooks/useTranslation';
 
 const HomePage: React.FC = () => {
+  const { t } = useTranslation();
+  
   const techStack = {
     languages: ['Python', 'TypeScript', 'JavaScript'],
     frameworks: ['React', 'FastAPI', 'LangChain'],
@@ -19,14 +22,13 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          AI技术专家
+          {t('home.title')}
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-4">
-          专注于LLM应用、Agent开发与RAG系统
+          {t('home.subtitle')}
         </p>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
-          致力于探索和实践前沿AI技术，构建智能化解决方案，
-          推动人工智能在实际场景中的应用落地。
+          {t('home.description')}
         </p>
         
         {/* Social Links */}
@@ -62,7 +64,7 @@ const HomePage: React.FC = () => {
           to="/projects"
           className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
         >
-          查看项目
+          {t('home.viewProjects')}
           <ArrowRight className="ml-2" size={20} />
         </Link>
       </section>
@@ -71,14 +73,14 @@ const HomePage: React.FC = () => {
       <section className="py-12">
         <ScrollReveal>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            技术栈
+            {t('home.techStackTitle')}
           </h2>
         </ScrollReveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ScrollReveal delay={0.1}>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                编程语言
+                {t('home.techStack.languages')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.languages.map((tech) => (
@@ -96,7 +98,7 @@ const HomePage: React.FC = () => {
           <ScrollReveal delay={0.2}>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                框架与库
+                {t('home.techStack.frameworks')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.frameworks.map((tech) => (
@@ -114,7 +116,7 @@ const HomePage: React.FC = () => {
           <ScrollReveal delay={0.3}>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                AI工具
+                {t('home.techStack.aiTools')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.aiTools.map((tech) => (
@@ -132,7 +134,7 @@ const HomePage: React.FC = () => {
           <ScrollReveal delay={0.4}>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                数据库
+                {t('home.techStack.databases')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.databases.map((tech) => (
@@ -150,7 +152,7 @@ const HomePage: React.FC = () => {
           <ScrollReveal delay={0.5}>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                云服务
+                {t('home.techStack.cloud')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.cloud.map((tech) => (
@@ -171,43 +173,43 @@ const HomePage: React.FC = () => {
       <section className="py-12 bg-gray-50 -mx-4 px-4 rounded-lg">
         <ScrollReveal>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            专业领域
+            {t('home.specializationTitle')}
           </h2>
         </ScrollReveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <ScrollReveal delay={0.1} direction="up">
             <div className="text-center">
               <div className="text-4xl mb-3">🤖</div>
-              <h3 className="font-semibold text-gray-900 mb-2">LLM应用</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('home.specialization.llm.title')}</h3>
               <p className="text-sm text-gray-600">
-                大语言模型集成与应用开发
+                {t('home.specialization.llm.description')}
               </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2} direction="up">
             <div className="text-center">
               <div className="text-4xl mb-3">🎯</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Agent开发</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('home.specialization.agent.title')}</h3>
               <p className="text-sm text-gray-600">
-                智能代理系统设计与实现
+                {t('home.specialization.agent.description')}
               </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.3} direction="up">
             <div className="text-center">
               <div className="text-4xl mb-3">📚</div>
-              <h3 className="font-semibold text-gray-900 mb-2">RAG系统</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('home.specialization.rag.title')}</h3>
               <p className="text-sm text-gray-600">
-                检索增强生成系统构建
+                {t('home.specialization.rag.description')}
               </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.4} direction="up">
             <div className="text-center">
               <div className="text-4xl mb-3">⚙️</div>
-              <h3 className="font-semibold text-gray-900 mb-2">模型微调</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('home.specialization.finetuning.title')}</h3>
               <p className="text-sm text-gray-600">
-                模型优化与定制化训练
+                {t('home.specialization.finetuning.description')}
               </p>
             </div>
           </ScrollReveal>

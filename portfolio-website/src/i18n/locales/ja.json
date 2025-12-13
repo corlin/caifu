@@ -1,0 +1,520 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "close": "閉じる",
+    "siteName": "AIウェルスサークル",
+    "footer": {
+      "copyright": "© {{year}} {{siteName}} -- AI技術エキスパート. All rights reserved."
+    }
+  },
+  "navigation": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "lab": "ラボ",
+    "about": "について",
+    "contact": "お問い合わせ"
+  },
+  "home": {
+    "title": "AI技術エキスパート",
+    "subtitle": "LLMアプリケーション、エージェント開発、RAGシステムに特化",
+    "description": "最先端のAI技術の探求と実践に専念し、インテリジェントなソリューションを構築し、実世界のシナリオでの人工知能の応用を推進しています。",
+    "viewProjects": "プロジェクトを見る",
+    "techStackTitle": "技術スタック",
+    "specializationTitle": "専門分野",
+    "techStack": {
+      "languages": "プログラミング言語",
+      "frameworks": "フレームワーク・ライブラリ",
+      "aiTools": "AIツール",
+      "databases": "データベース",
+      "cloud": "クラウドサービス"
+    },
+    "specialization": {
+      "llm": {
+        "title": "LLMアプリケーション",
+        "description": "大規模言語モデルの統合とアプリケーション開発"
+      },
+      "agent": {
+        "title": "エージェント開発",
+        "description": "インテリジェントエージェントシステムの設計と実装"
+      },
+      "rag": {
+        "title": "RAGシステム",
+        "description": "検索拡張生成システムの構築"
+      },
+      "finetuning": {
+        "title": "モデルファインチューニング",
+        "description": "モデル最適化とカスタマイズ訓練"
+      }
+    }
+  },
+  "projects": {
+    "title": "技術プロジェクト",
+    "description": "AI/LLM分野での技術実践を探求し、大規模言語モデルアプリケーション、インテリジェントエージェント開発、RAGシステム、モデルファインチューニングなどの方向性をカバーしています。",
+    "featured": "注目プロジェクト",
+    "all": "全プロジェクト",
+    "category": "カテゴリー",
+    "techStack": "技術スタック",
+    "viewDetails": "詳細を見る",
+    "viewDemo": "デモを見る",
+    "viewCode": "コードを見る",
+    "projectCount": "合計 {{count}} プロジェクト",
+    "categories": {
+      "all": "全て",
+      "llmApplication": "LLMアプリケーション",
+      "agentDevelopment": "エージェント開発",
+      "ragSystem": "RAGシステム",
+      "modelFinetuning": "モデルファインチューニング",
+      "mlInfrastructure": "ML基盤",
+      "openSource": "オープンソース",
+      "research": "研究"
+    }
+  },
+  "about": {
+    "title": "私について",
+    "professionalBackground": "専門的背景",
+    "techMethodology": "技術方法論",
+    "bestPractices": "技術ベストプラクティス",
+    "techEvolution": "技術スタックの進化",
+    "learningPath": "学習パスと技術成長",
+    "currentFocus": "現在の研究方向",
+    "coreSkills": "コアスキル",
+    "practiceProjects": "実践プロジェクト",
+    "active": "進行中",
+    "exploring": "探索中",
+    "personalInfo": {
+      "name": "AI技術エキスパート",
+      "title": "AI/LLMアプリケーションアーキテクト",
+      "bio": "大規模言語モデルアプリケーション開発、インテリジェントエージェントシステム設計、RAG技術実践に特化。最先端のAI技術を実用的なソリューションに変換し、企業や開発者がインテリジェントアプリケーションを構築することを支援することに専念。",
+      "experience": "5年以上のAI/ML開発経験",
+      "location": "中国",
+      "email": "info@caifu.social"
+    },
+    "professionalBackgroundData": {
+      "summary": "従来のソフトウェア開発からAI分野に転身し、大規模言語モデルアプリケーション開発とインテリジェントシステムアーキテクチャ設計を深く掘り下げています。複雑なAI技術を実装可能な製品ソリューションに変換することに長け、LLMアプリケーション、エージェント開発、RAGシステムなどの分野で豊富な実戦経験を蓄積しています。",
+      "highlights": [
+        "複数の企業レベルLLMアプリケーションプロジェクトを主導し、10万人以上のユーザーにサービスを提供",
+        "オープンソースプロジェクトで累計5000以上のGitHub Starsを獲得",
+        "AI技術コミュニティで20以上の詳細な技術記事を発表",
+        "複数の企業にAI技術コンサルティングとアーキテクチャ設計サービスを提供"
+      ]
+    },
+    "techMethodologyData": {
+      "title": "技術方法論",
+      "principles": [
+        {
+          "name": "実用主義優先",
+          "description": "技術選択は実際の問題解決を指向し、過度なエンジニアリングを避ける。成熟した安定した技術スタックを選択し、システムの保守性と拡張性を確保する。",
+          "icon": "🎯"
+        },
+        {
+          "name": "迅速な反復検証",
+          "description": "MVP手法を採用してアイデアを迅速に検証し、ユーザーフィードバックを通じて継続的に最適化。プロトタイプ開発とA/Bテストを重視し、データ駆動の意思決定を行う。",
+          "icon": "🚀"
+        },
+        {
+          "name": "システム思考",
+          "description": "グローバルな視点からシステムアーキテクチャを設計し、パフォーマンス、セキュリティ、コストなどの多次元要因を考慮。コード品質とドキュメントの完備に注力し、チーム協力を促進。",
+          "icon": "🏗️"
+        },
+        {
+          "name": "継続的学習成長",
+          "description": "新技術への好奇心を保ち、定期的に最先端の論文やオープンソースプロジェクトを学習。実践プロジェクトを通じて理解を深め、経験を共有してコミュニティに還元。",
+          "icon": "📚"
+        }
+      ]
+    },
+    "bestPracticesData": [
+      {
+        "category": "LLMアプリケーション開発",
+        "practices": [
+          "プロンプトエンジニアリング：構造化されたプロンプト設計により、出力品質と安定性を向上",
+          "コンテキスト管理：トークン使用を最適化し、コストと効果のバランスを取る",
+          "エラー処理：再試行メカニズムと劣化戦略を実装し、システムの堅牢性を向上",
+          "評価システム：多次元評価指標を確立し、モデル性能を継続的に最適化"
+        ]
+      },
+      {
+        "category": "エージェントシステム設計",
+        "practices": [
+          "タスク分解：複雑なタスクを実行可能なサブタスクに分解",
+          "ツール統合：動的拡張をサポートする柔軟なツール呼び出しインターフェースを設計",
+          "状態管理：信頼性の高い状態追跡と回復メカニズムを実装",
+          "セキュリティ制御：権限境界と実行制限を設定し、異常な動作を防止"
+        ]
+      },
+      {
+        "category": "RAGシステム最適化",
+        "practices": [
+          "文書処理：意味的完整性を保つインテリジェントなチャンク戦略",
+          "検索最適化：ハイブリッド検索手法により、再現率と精度を向上",
+          "再ランキング：Cross-Encoderを使用して関連性ランキングを向上",
+          "キャッシュ戦略：多層キャッシュを実装し、遅延とコストを削減"
+        ]
+      }
+    ],
+    "techEvolutionData": [
+      {
+        "period": "2018-2019",
+        "focus": "従来のWeb開発",
+        "technologies": ["React", "Node.js", "MongoDB", "AWS"],
+        "milestone": "複数のフルスタックWebアプリケーションを構築し、エンジニアリング経験を蓄積"
+      },
+      {
+        "period": "2020-2021",
+        "focus": "機械学習入門",
+        "technologies": ["Python", "TensorFlow", "scikit-learn", "Pandas"],
+        "milestone": "ML基礎学習を完了し、画像分類とNLPプロジェクトを実装"
+      },
+      {
+        "period": "2022",
+        "focus": "NLP深層学習",
+        "technologies": ["PyTorch", "Transformers", "BERT", "GPT-2"],
+        "milestone": "Transformerアーキテクチャを深く研究し、テキスト生成アプリケーションを開発"
+      },
+      {
+        "period": "2023",
+        "focus": "LLMアプリケーション開発",
+        "technologies": ["GPT-4", "LangChain", "Vector DB", "FastAPI"],
+        "milestone": "LLMアプリケーション開発に転身し、複数の商用製品を構築"
+      },
+      {
+        "period": "2024-現在",
+        "focus": "AI エージェント & RAG",
+        "technologies": ["AutoGPT", "LlamaIndex", "Pinecone", "Weaviate"],
+        "milestone": "エージェントシステムとRAG技術に焦点を当て、AIアプリケーションの境界を探索"
+      }
+    ],
+    "learningPathData": [
+      {
+        "phase": "基礎段階",
+        "description": "プログラミング基礎とWeb開発スキルを習得",
+        "skills": ["JavaScript/TypeScript", "Reactエコシステム", "Node.jsバックエンド", "SQL/NoSQLデータベース"],
+        "projects": ["個人ブログシステム", "Eコマースプラットフォーム", "リアルタイムチャットアプリケーション"]
+      },
+      {
+        "phase": "機械学習段階",
+        "description": "ML基礎理論と古典的アルゴリズムを学習",
+        "skills": ["Pythonデータサイエンススタック", "教師あり/教師なし学習", "特徴エンジニアリング", "モデル評価"],
+        "projects": ["住宅価格予測", "感情分析", "推薦システム"]
+      },
+      {
+        "phase": "深層学習段階",
+        "description": "ニューラルネットワークとNLP技術を深く学習",
+        "skills": ["PyTorchフレームワーク", "CNN/RNN/Transformer", "転移学習", "モデル最適化"],
+        "projects": ["画像認識", "テキスト分類", "機械翻訳"]
+      },
+      {
+        "phase": "LLMアプリケーション段階",
+        "description": "大規模モデルアプリケーション開発スキルを習得",
+        "skills": ["プロンプトエンジニアリング", "LangChain/LlamaIndex", "ベクターデータベース", "API統合"],
+        "projects": ["インテリジェントカスタマーサービス", "文書Q&A", "コードアシスタント"]
+      },
+      {
+        "phase": "高度なアプリケーション段階",
+        "description": "エージェントと複雑なAIシステムを探索",
+        "skills": ["エージェントアーキテクチャ設計", "RAG最適化", "マルチモーダルアプリケーション", "モデルファインチューニング"],
+        "projects": ["自律エージェントシステム", "企業ナレッジベース", "マルチモーダル検索"]
+      }
+    ],
+    "currentFocusData": {
+      "areas": [
+        {
+          "title": "エージェントシステムアーキテクチャ",
+          "description": "自律エージェントの計画、実行、反省メカニズムを研究し、マルチエージェント協力パターンを探索",
+          "status": "active"
+        },
+        {
+          "title": "RAG技術最適化",
+          "description": "検索拡張生成システムを最適化し、精度と応答速度を向上",
+          "status": "active"
+        },
+        {
+          "title": "モデルファインチューニング実践",
+          "description": "効率的なファインチューニング手法（LoRA、QLoRA）を探索し、特定ドメインタスクに適応",
+          "status": "exploring"
+        },
+        {
+          "title": "マルチモーダルアプリケーション",
+          "description": "視覚と言語モデルを組み合わせ、画像テキスト理解アプリケーションを開発",
+          "status": "exploring"
+        }
+      ]
+    },
+    "achievementsData": [
+      {
+        "title": "AI革新アプリケーション賞",
+        "organization": "中国人工知能会議",
+        "year": "2024",
+        "description": "LLMベースのインテリジェントカスタマーサービスシステムが最優秀アプリケーション革新賞を受賞",
+        "type": "award"
+      },
+      {
+        "title": "GitHub Starプロジェクト",
+        "organization": "GitHub",
+        "year": "2023",
+        "description": "オープンソースRAGフレームワークが5000以上のスターを獲得し、複数の企業で採用",
+        "type": "contribution"
+      },
+      {
+        "title": "AI技術サミット講演",
+        "organization": "AI開発者会議",
+        "year": "2024",
+        "description": "「エージェントシステムアーキテクチャ設計と実践」をテーマとした基調講演を実施",
+        "type": "speaking"
+      },
+      {
+        "title": "LLMアプリケーションベストプラクティス",
+        "organization": "技術コミュニティ",
+        "year": "2023",
+        "description": "技術記事シリーズを発表し、累計読者数50万人を超える",
+        "type": "publication"
+      },
+      {
+        "title": "AWS機械学習エキスパート",
+        "organization": "Amazon Web Services",
+        "year": "2023",
+        "description": "AWS Machine Learning Specialty認定を取得",
+        "type": "certification"
+      },
+      {
+        "title": "オープンソースコミュニティ貢献者",
+        "organization": "LangChain/LlamaIndex",
+        "year": "2023",
+        "description": "主流AIフレームワークにコードとドキュメントを貢献し、コミュニティに認められる",
+        "type": "contribution"
+      }
+    ],
+    "certificationsData": [
+      {
+        "name": "AWS Certified Machine Learning - Specialty",
+        "issuer": "Amazon Web Services",
+        "date": "2023年6月",
+        "credentialId": "AWS-ML-2023-XXXXX",
+        "verificationUrl": "https://aws.amazon.com/verification"
+      },
+      {
+        "name": "Google Cloud Professional ML Engineer",
+        "issuer": "Google Cloud",
+        "date": "2023年3月",
+        "credentialId": "GCP-ML-2023-XXXXX",
+        "verificationUrl": "https://cloud.google.com/certification"
+      },
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "DeepLearning.AI (Coursera)",
+        "date": "2022年8月",
+        "credentialId": "DL-SPEC-2022-XXXXX",
+        "verificationUrl": "https://coursera.org/verify"
+      },
+      {
+        "name": "TensorFlow Developer Certificate",
+        "issuer": "TensorFlow",
+        "date": "2022年5月",
+        "credentialId": "TF-DEV-2022-XXXXX"
+      }
+    ],
+    "recommendationsData": [
+      {
+        "content": "LLMアプリケーション開発において卓越した技術能力と革新的思考を示しました。彼が設計したRAGシステムアーキテクチャは優雅で効率的であり、我々の製品のユーザーエクスペリエンスを大幅に向上させました。",
+        "author": "張伟",
+        "position": "CTO",
+        "company": "AIスタートアップ",
+        "projectContext": "企業ナレッジベースQ&Aシステム"
+      },
+      {
+        "content": "AI技術に対する深い理解を持ち、複雑な技術概念を実装可能なソリューションに変換することができます。エージェントシステム開発において優れたアーキテクチャ設計能力を発揮しました。",
+        "author": "李明",
+        "position": "技術ディレクター",
+        "company": "インターネット大手",
+        "projectContext": "インテリジェントマーケティングエージェントプラットフォーム"
+      },
+      {
+        "content": "技術基盤が堅実で、コード品質が高く、ドキュメントが完備されています。オープンソースプロジェクトでの貢献により、複数の重要な技術課題を解決することができました。",
+        "author": "Sarah Chen",
+        "position": "シニアエンジニア",
+        "company": "AIスタートアップ",
+        "projectContext": "LangChainフレームワーク最適化"
+      },
+      {
+        "content": "モデルファインチューニングとプロンプトエンジニアリングにおいて独自の見解を持ち、我々のチームがLLMアプリケーション開発のベストプラクティスを迅速に習得することを支援しました。",
+        "author": "王芳",
+        "position": "プロダクトマネージャー",
+        "company": "教育技術会社",
+        "projectContext": "AI教育アシスタント"
+      }
+    ]
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "AI技術、プロジェクト協力、またはアイデアについてお気軽にご連絡ください。できるだけ早くお返事いたします。",
+    "contactMethods": "連絡方法",
+    "contactDescription": "以下の方法でご連絡いただけます。技術的な議論、プロジェクト協力、コンサルティングアドバイスなど、喜んでお話しさせていただきます。",
+    "sendMessage": "メッセージを送信",
+    "collaborationAreas": "協力分野",
+    "collaboration": {
+      "llmDevelopment": "LLMアプリケーション開発とアーキテクチャ設計",
+      "agentSystems": "AIエージェントシステム開発",
+      "ragOptimization": "RAGシステム最適化と実装",
+      "techConsulting": "技術コンサルティングとトレーニング",
+      "openSource": "オープンソースプロジェクト協力"
+    },
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ内容",
+      "required": "*",
+      "namePlaceholder": "お名前を入力してください",
+      "emailPlaceholder": "your@email.com",
+      "subjectPlaceholder": "メッセージの件名を入力してください",
+      "messagePlaceholder": "お聞かせしたい内容を入力してください...",
+      "send": "メッセージを送信",
+      "sending": "送信中...",
+      "success": "メッセージが正常に送信されました！",
+      "successMessage": "メッセージをありがとうございます。できるだけ早くお返事いたします。",
+      "error": "送信に失敗しました",
+      "errorMessage": "申し訳ございませんが、メッセージの送信に失敗しました。後でもう一度お試しいただくか、メールで直接ご連絡ください。"
+    },
+    "validation": {
+      "nameRequired": "お名前を入力してください",
+      "nameMinLength": "お名前は2文字以上である必要があります",
+      "emailRequired": "メールアドレスを入力してください",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "subjectRequired": "件名を入力してください",
+      "subjectMinLength": "件名は3文字以上である必要があります",
+      "messageRequired": "メッセージ内容を入力してください",
+      "messageMinLength": "メッセージ内容は10文字以上である必要があります"
+    },
+    "contactInfo": {
+      "email": "メール",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "lab": {
+    "title": "技術ラボ",
+    "subtitle": "最先端のAI技術を探求し、革新的なソリューションを構築し、オープンソースエコシステムの発展を推進",
+    "researchAreas": "研究分野",
+    "experiments": "実験プロジェクト",
+    "openSource": "オープンソース貢献",
+    "openSourceDescription": "オープンソースコミュニティに積極的に参加し、主流のAIフレームワークやツールにコードを貢献し、技術エコシステムの発展を推進",
+    "cta": {
+      "title": "実験プロジェクトに興味がありますか？",
+      "description": "お気軽にご連絡いただき、協力の可能性を探りましょう",
+      "contact": "お問い合わせ"
+    },
+    "categories": {
+      "all": "全て",
+      "research": "研究",
+      "prototype": "プロトタイプ",
+      "openSource": "オープンソース",
+      "innovation": "イノベーション"
+    },
+    "status": {
+      "active": "進行中",
+      "completed": "完了",
+      "archived": "アーカイブ済み"
+    },
+    "highlights": "主要なハイライト",
+    "demo": "デモ",
+    "documentation": "ドキュメント",
+    "experimentsData": {
+      "exp1": {
+        "title": "マルチエージェント協調フレームワーク",
+        "description": "マルチエージェントシステムにおける協調メカニズムを探求し、エージェント間の効率的な通信とタスク配分を実現。LangChainとAutoGenをベースに構築し、動的な役割割り当てとタスクオーケストレーションをサポート。",
+        "highlights": {
+          "0": "10種類以上のエージェント役割の動的組み合わせをサポート",
+          "1": "分散タスクスケジューリングアルゴリズムを実装",
+          "2": "視覚的な協調プロセス監視を提供",
+          "3": "タスク完了時間を30%短縮"
+        },
+        "impact": "3つの本番プロジェクトで採用"
+      },
+      "exp2": {
+        "title": "RAG性能最適化ツールキット",
+        "description": "オープンソースのRAGシステム性能最適化ツールセット。ベクトル検索最適化、チャンク戦略分析、リコール評価などの機能を含む。開発者がRAGシステムの性能を迅速に診断・最適化するのを支援。",
+        "highlights": {
+          "0": "5種類のチャンク戦略比較分析を提供",
+          "1": "複数のベクトルデータベース性能テストをサポート",
+          "2": "リコール率と精度指標を可視化",
+          "3": "A/Bテストフレームワークを統合"
+        },
+        "impact": "500以上のGitHub Starsを獲得"
+      },
+      "exp3": {
+        "title": "プロンプトエンジニアリング実験プラットフォーム",
+        "description": "プロンプトの設計、テスト、最適化のための実験プラットフォーム。マルチモデル比較、バージョン管理、A/Bテストをサポートし、チームがプロンプト効果を体系的に最適化するのを支援。",
+        "highlights": {
+          "0": "GPT-4、Claude、Geminiなど複数のモデルをサポート",
+          "1": "プロンプトテンプレートライブラリとベストプラクティスを内蔵",
+          "2": "リアルタイム性能とコスト分析",
+          "3": "チーム協力とバージョン管理"
+        }
+      },
+      "exp4": {
+        "title": "軽量ベクトルデータベース",
+        "description": "エッジデバイスと小規模アプリケーション向けに設計されたベクトルデータベース。ローカル展開をサポートし、外部依存関係は不要。革新的なインデックスアルゴリズムを採用し、高性能を維持しながらメモリ使用量を大幅に削減。",
+        "highlights": {
+          "0": "メモリ使用量を70%削減",
+          "1": "ブラウザでのWASM実行をサポート",
+          "2": "ミリ秒レベルのクエリ応答",
+          "3": "完全オフライン利用可能"
+        },
+        "impact": "プライバシー重視のシナリオに適用"
+      },
+      "exp5": {
+        "title": "LLMファインチューニング自動化パイプライン",
+        "description": "データ準備、トレーニング、評価から展開までの完全なプロセスをカバーするエンドツーエンドのモデルファインチューニング自動化ツール。LoRA、QLoRAなどの効率的なファインチューニング手法をサポートし、MLOpsベストプラクティスを統合。",
+        "highlights": {
+          "0": "ワンクリックファインチューニングプロセス設定",
+          "1": "分散トレーニングをサポート",
+          "2": "自動ハイパーパラメータ最適化",
+          "3": "モデルバージョン管理を統合"
+        },
+        "impact": "チームのファインチューニング時間を60%節約"
+      },
+      "exp6": {
+        "title": "AIコードレビューアシスタント",
+        "description": "LLMベースのインテリジェントコードレビューツール。コード品質問題、セキュリティ脆弱性、性能ボトルネックを自動検出。複数のプログラミング言語をサポートし、CI/CDプロセスに統合可能。",
+        "highlights": {
+          "0": "10種類以上のコード問題を識別",
+          "1": "具体的な修正提案を提供",
+          "2": "チームのコーディングスタイルを学習",
+          "3": "カスタムルールをサポート"
+        }
+      }
+    },
+    "researchAreasData": {
+      "multimodal": {
+        "title": "マルチモーダルAI",
+        "description": "テキスト、画像、音声の融合処理を探求"
+      },
+      "agentAutonomy": {
+        "title": "エージェント自律性",
+        "description": "AIエージェントの意思決定と学習能力を向上"
+      },
+      "knowledgeGraph": {
+        "title": "知識グラフ",
+        "description": "記号推論とニューラルネットワークを結合"
+      },
+      "edgeAI": {
+        "title": "エッジAI",
+        "description": "リソース制約環境でのAI展開"
+      }
+    },
+    "openSourceData": {
+      "langchain": {
+        "contributions": "3つのコア機能と15以上のバグ修正に貢献"
+      },
+      "llamaindex": {
+        "contributions": "ベクトル検索性能を最適化し、効率を20%向上"
+      },
+      "huggingface": {
+        "contributions": "新しいモデルサポートとドキュメント改善を追加"
+      }
+    }
+  }
+}

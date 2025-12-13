@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from '../../i18n/hooks/useTranslation';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { path: '/', label: '首页' },
-    { path: '/projects', label: '项目' },
-    { path: '/lab', label: '实验室' },
-    { path: '/about', label: '关于' },
-    { path: '/contact', label: '联系' },
+    { path: '/', label: t('navigation.home') },
+    { path: '/projects', label: t('navigation.projects') },
+    { path: '/lab', label: t('navigation.lab') },
+    { path: '/about', label: t('navigation.about') },
+    { path: '/contact', label: t('navigation.contact') },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -21,7 +24,7 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-gray-900">
-            AI财富圈
+            {t('common.siteName')}
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,6 +40,8 @@ const Header: React.FC = () => {
                 {item.label}
               </Link>
             ))}
+            {/* Language Switcher */}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,6 +69,10 @@ const Header: React.FC = () => {
                 {item.label}
               </Link>
             ))}
+            {/* Mobile Language Switcher */}
+            <div className="pt-2 border-t border-gray-200">
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </nav>

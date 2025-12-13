@@ -10,22 +10,51 @@ import {
   Building2,
   GraduationCap
 } from 'lucide-react';
-import {
-  personalInfo,
-  professionalBackground,
-  techMethodology,
-  bestPractices,
-  techEvolution,
-  learningPath,
-  currentFocus,
-  achievements,
-  certifications,
-  recommendations
-} from '../data/aboutData';
+// Removed aboutData imports as we're handling translations directly in the component
 import Achievements from '../components/about/Achievements';
 import PageTransition from '../components/animations/PageTransition';
+import { useTranslation } from '../i18n/hooks/useTranslation';
+import { useI18nContext } from '../i18n/context/I18nContext';
 
 const AboutPage: React.FC = () => {
+  const { t } = useTranslation();
+  const { translations } = useI18nContext();
+  
+  // Helper function to get nested values safely
+  const getNestedValue = (path: string): any => {
+    return path.split('.').reduce((current: any, key: string) => {
+      return current && current[key] !== undefined ? current[key] : null;
+    }, translations);
+  };
+  
+  // Get translated data directly
+  const personalInfo = {
+    name: t('about.personalInfo.name'),
+    title: t('about.personalInfo.title'),
+    bio: t('about.personalInfo.bio'),
+    experience: t('about.personalInfo.experience'),
+    location: t('about.personalInfo.location'),
+    email: t('about.personalInfo.email')
+  };
+  
+  const professionalBackground = {
+    summary: t('about.professionalBackgroundData.summary'),
+    highlights: getNestedValue('about.professionalBackgroundData.highlights') || []
+  };
+  
+  const techMethodology = {
+    title: t('about.techMethodologyData.title'),
+    principles: getNestedValue('about.techMethodologyData.principles') || []
+  };
+  
+  const bestPractices = getNestedValue('about.bestPracticesData') || [];
+  const techEvolution = getNestedValue('about.techEvolutionData') || [];
+  const learningPath = getNestedValue('about.learningPathData') || [];
+  const currentFocus = getNestedValue('about.currentFocusData') || { areas: [] };
+  const achievements = getNestedValue('about.achievementsData') || [];
+  const certifications = getNestedValue('about.certificationsData') || [];
+  const recommendations = getNestedValue('about.recommendationsData') || [];
+  
   const iconMap: Record<string, React.ReactNode> = {
     '🎯': <Target className="w-8 h-8 text-blue-600" />,
     '🚀': <Rocket className="w-8 h-8 text-blue-600" />,
@@ -45,7 +74,7 @@ const AboutPage: React.FC = () => {
           className="mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            关于我
+            {t('about.title')}
           </h1>
           <p className="text-xl text-gray-600 mb-6">
             {personalInfo.bio}
@@ -69,13 +98,13 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <Lightbulb className="w-8 h-8 text-blue-600" />
-            专业背景
+            {t('about.professionalBackground')}
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             {professionalBackground.summary}
           </p>
           <div className="grid gap-4">
-            {professionalBackground.highlights.map((highlight, index) => (
+            {professionalBackground.highlights.map((highlight: string, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -99,10 +128,10 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <Target className="w-8 h-8 text-blue-600" />
-            {techMethodology.title}
+            {t('about.techMethodology')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {techMethodology.principles.map((principle, index) => (
+            {techMethodology.principles.map((principle: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -133,10 +162,10 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <Code2 className="w-8 h-8 text-blue-600" />
-            技术最佳实践
+            {t('about.bestPractices')}
           </h2>
           <div className="space-y-8">
-            {bestPractices.map((practice, index) => (
+            {bestPractices.map((practice: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -148,7 +177,7 @@ const AboutPage: React.FC = () => {
                   {practice.category}
                 </h3>
                 <ul className="space-y-3">
-                  {practice.practices.map((item, idx) => (
+                  {practice.practices.map((item: string, idx: number) => (
                     <li key={idx} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
@@ -169,14 +198,14 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-blue-600" />
-            技术栈演进历程
+            {t('about.techEvolution')}
           </h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200" />
             
             <div className="space-y-8">
-              {techEvolution.map((evolution, index) => (
+              {techEvolution.map((evolution: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -198,7 +227,7 @@ const AboutPage: React.FC = () => {
                     </div>
                     <p className="text-gray-700 mb-3">{evolution.milestone}</p>
                     <div className="flex flex-wrap gap-2">
-                      {evolution.technologies.map((tech, idx) => (
+                      {evolution.technologies.map((tech: string, idx: number) => (
                         <span
                           key={idx}
                           className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
@@ -223,10 +252,10 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <GraduationCap className="w-8 h-8 text-blue-600" />
-            学习路径与技术成长
+            {t('about.learningPath')}
           </h2>
           <div className="space-y-6">
-            {learningPath.map((path, index) => (
+            {learningPath.map((path: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -241,10 +270,10 @@ const AboutPage: React.FC = () => {
                 
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">
-                    核心技能
+                    {t('about.coreSkills')}
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {path.skills.map((skill, idx) => (
+                    {path.skills.map((skill: string, idx: number) => (
                       <span
                         key={idx}
                         className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-lg"
@@ -258,10 +287,10 @@ const AboutPage: React.FC = () => {
                 {path.projects && (
                   <div>
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">
-                      实践项目
+                      {t('about.practiceProjects')}
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {path.projects.map((project, idx) => (
+                      {path.projects.map((project: string, idx: number) => (
                         <span
                           key={idx}
                           className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-lg"
@@ -286,10 +315,10 @@ const AboutPage: React.FC = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <Rocket className="w-8 h-8 text-blue-600" />
-            当前研究方向
+            {t('about.currentFocus')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {currentFocus.areas.map((area, index) => (
+            {currentFocus.areas.map((area: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -308,7 +337,7 @@ const AboutPage: React.FC = () => {
                         : 'bg-yellow-100 text-yellow-700'
                     }`}
                   >
-                    {area.status === 'active' ? '进行中' : '探索中'}
+                    {area.status === 'active' ? t('about.active') : t('about.exploring')}
                   </span>
                 </div>
                 <p className="text-gray-600">{area.description}</p>

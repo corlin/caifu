@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Twitter, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import PageTransition from '../components/animations/PageTransition';
 import ScrollReveal from '../components/animations/ScrollReveal';
+import { useTranslation } from '../i18n/hooks/useTranslation';
 
 interface FormData {
   name: string;
@@ -21,6 +22,8 @@ interface FormErrors {
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 const ContactPage: React.FC = () => {
+  const { t } = useTranslation();
+  
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -35,28 +38,28 @@ const ContactPage: React.FC = () => {
   const contactMethods = [
     {
       icon: Mail,
-      label: '邮箱',
+      label: t('contact.contactInfo.email'),
       value: 'info@caifu.social',
       href: 'mailto:info@caifu.social',
       color: 'text-blue-600'
     },
     {
       icon: Github,
-      label: 'GitHub',
+      label: t('contact.contactInfo.github'),
       value: 'github.com/corlin',
       href: 'https://github.com/corlin',
       color: 'text-gray-900'
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
+      label: t('contact.contactInfo.linkedin'),
       value: 'linkedin.com/in/corlin-chen-20160424/',
       href: 'https://linkedin.com/in/corlin-chen-20160424/',
       color: 'text-blue-700'
     },
     {
       icon: Twitter,
-      label: 'Twitter',
+      label: t('contact.contactInfo.twitter'),
       value: '@corlin',
       href: 'https://twitter.com/corlin',
       color: 'text-sky-500'
@@ -66,21 +69,21 @@ const ContactPage: React.FC = () => {
   const validateField = (name: keyof FormData, value: string): string | undefined => {
     switch (name) {
       case 'name':
-        if (!value.trim()) return '请输入您的姓名';
-        if (value.trim().length < 2) return '姓名至少需要2个字符';
+        if (!value.trim()) return t('contact.validation.nameRequired');
+        if (value.trim().length < 2) return t('contact.validation.nameMinLength');
         break;
       case 'email':
-        if (!value.trim()) return '请输入您的邮箱';
+        if (!value.trim()) return t('contact.validation.emailRequired');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) return '请输入有效的邮箱地址';
+        if (!emailRegex.test(value)) return t('contact.validation.emailInvalid');
         break;
       case 'subject':
-        if (!value.trim()) return '请输入主题';
-        if (value.trim().length < 3) return '主题至少需要3个字符';
+        if (!value.trim()) return t('contact.validation.subjectRequired');
+        if (value.trim().length < 3) return t('contact.validation.subjectMinLength');
         break;
       case 'message':
-        if (!value.trim()) return '请输入留言内容';
-        if (value.trim().length < 10) return '留言内容至少需要10个字符';
+        if (!value.trim()) return t('contact.validation.messageRequired');
+        if (value.trim().length < 10) return t('contact.validation.messageMinLength');
         break;
     }
     return undefined;
@@ -182,10 +185,10 @@ const ContactPage: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            联系我
+            {t('contact.title')}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            欢迎与我交流AI技术、项目合作或任何想法。我会尽快回复您的消息。
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -193,9 +196,9 @@ const ContactPage: React.FC = () => {
           {/* Contact Information */}
           <ScrollReveal direction="left" delay={0.2}>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">联系方式</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.contactMethods')}</h2>
             <p className="text-gray-600 mb-8">
-              您可以通过以下方式与我联系。无论是技术讨论、项目合作还是咨询建议，我都很乐意与您交流。
+              {t('contact.contactDescription')}
             </p>
 
             <div className="space-y-4">
@@ -227,27 +230,27 @@ const ContactPage: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-100"
             >
-              <h3 className="font-semibold text-gray-900 mb-2">合作领域</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('contact.collaborationAreas')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>LLM应用开发与架构设计</span>
+                  <span>{t('contact.collaboration.llmDevelopment')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>AI Agent系统开发</span>
+                  <span>{t('contact.collaboration.agentSystems')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>RAG系统优化与实施</span>
+                  <span>{t('contact.collaboration.ragOptimization')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>技术咨询与培训</span>
+                  <span>{t('contact.collaboration.techConsulting')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>开源项目合作</span>
+                  <span>{t('contact.collaboration.openSource')}</span>
                 </li>
               </ul>
             </motion.div>
@@ -257,13 +260,13 @@ const ContactPage: React.FC = () => {
           {/* Contact Form */}
           <ScrollReveal direction="right" delay={0.4}>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">发送消息</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.sendMessage')}</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  姓名 <span className="text-red-500">*</span>
+                  {t('contact.form.name')} <span className="text-red-500">{t('contact.form.required')}</span>
                 </label>
                 <input
                   type="text"
@@ -276,7 +279,7 @@ const ContactPage: React.FC = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                     errors.name && touched.name ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="请输入您的姓名"
+                  placeholder={t('contact.form.namePlaceholder')}
                 />
                 {errors.name && touched.name && (
                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
@@ -289,7 +292,7 @@ const ContactPage: React.FC = () => {
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  邮箱 <span className="text-red-500">*</span>
+                  {t('contact.form.email')} <span className="text-red-500">{t('contact.form.required')}</span>
                 </label>
                 <input
                   type="email"
@@ -302,7 +305,7 @@ const ContactPage: React.FC = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                     errors.email && touched.email ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="your@email.com"
+                  placeholder={t('contact.form.emailPlaceholder')}
                 />
                 {errors.email && touched.email && (
                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
@@ -315,7 +318,7 @@ const ContactPage: React.FC = () => {
               {/* Subject Field */}
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  主题 <span className="text-red-500">*</span>
+                  {t('contact.form.subject')} <span className="text-red-500">{t('contact.form.required')}</span>
                 </label>
                 <input
                   type="text"
@@ -328,7 +331,7 @@ const ContactPage: React.FC = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                     errors.subject && touched.subject ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="请输入消息主题"
+                  placeholder={t('contact.form.subjectPlaceholder')}
                 />
                 {errors.subject && touched.subject && (
                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
@@ -341,7 +344,7 @@ const ContactPage: React.FC = () => {
               {/* Message Field */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  留言内容 <span className="text-red-500">*</span>
+                  {t('contact.form.message')} <span className="text-red-500">{t('contact.form.required')}</span>
                 </label>
                 <textarea
                   id="message"
@@ -353,7 +356,7 @@ const ContactPage: React.FC = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none ${
                     errors.message && touched.message ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="请输入您想说的内容..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
                 {errors.message && touched.message && (
                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
@@ -372,12 +375,12 @@ const ContactPage: React.FC = () => {
                 {submitStatus === 'submitting' ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    发送中...
+                    {t('contact.form.sending')}
                   </>
                 ) : (
                   <>
                     <Send size={18} />
-                    发送消息
+                    {t('contact.form.send')}
                   </>
                 )}
               </button>
@@ -391,9 +394,9 @@ const ContactPage: React.FC = () => {
                 >
                   <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
                   <div>
-                    <p className="font-medium text-green-900">消息发送成功！</p>
+                    <p className="font-medium text-green-900">{t('contact.form.success')}</p>
                     <p className="text-sm text-green-700 mt-1">
-                      感谢您的留言，我会尽快回复您。
+                      {t('contact.form.successMessage')}
                     </p>
                   </div>
                 </motion.div>
@@ -408,9 +411,9 @@ const ContactPage: React.FC = () => {
                 >
                   <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
                   <div>
-                    <p className="font-medium text-red-900">发送失败</p>
+                    <p className="font-medium text-red-900">{t('contact.form.error')}</p>
                     <p className="text-sm text-red-700 mt-1">
-                      抱歉，消息发送失败。请稍后重试或直接通过邮箱联系我。
+                      {t('contact.form.errorMessage')}
                     </p>
                   </div>
                 </motion.div>

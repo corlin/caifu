@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import ErrorBoundary from './components/ErrorBoundary';
 import Layout from './components/layout/Layout';
+import { I18nProvider, I18nErrorBoundary } from './i18n';
 
 // Lazy load page components for code splitting
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -15,11 +16,15 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 import LoadingIndicator from './components/ui/LoadingIndicator';
 
 // Loading component
-const LoadingFallback = () => (
-  <div className="min-h-[60vh]">
-    <LoadingIndicator size="md" text="加载中..." />
-  </div>
-);
+const LoadingFallback = () => {
+  // Note: We can't use useTranslation here as this component might render before I18nProvider
+  // So we'll keep the fallback text or use a simple loading indicator
+  return (
+    <div className="min-h-[60vh]">
+      <LoadingIndicator size="md" text="Loading..." />
+    </div>
+  );
+};
 
 // AnimatedRoutes component to handle route transitions
 function AnimatedRoutes() {
@@ -40,15 +45,25 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  // Error handler for I18n system
+  const handleI18nError = (error: Error) => {
+    console.error('I18n System Error:', error);
+    // In production, you might want to send this to an error reporting service
+  };
+
   return (
     <ErrorBoundary>
-      <Router>
-        <Layout>
-          <Suspense fallback={<LoadingFallback />}>
-            <AnimatedRoutes />
-          </Suspense>
-        </Layout>
-      </Router>
+      <I18nErrorBoundary>
+        <I18nProvider onError={handleI18nError}>
+          <Router>
+            <Layout>
+              <Suspense fallback={<LoadingFallback />}>
+                <AnimatedRoutes />
+              </Suspense>
+            </Layout>
+          </Router>
+        </I18nProvider>
+      </I18nErrorBoundary>
     </ErrorBoundary>
   );
 }

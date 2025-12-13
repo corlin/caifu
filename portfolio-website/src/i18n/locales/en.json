@@ -1,0 +1,520 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "siteName": "AI Wealth Circle",
+    "footer": {
+      "copyright": "© {{year}} {{siteName}} -- AI Technology Expert. All rights reserved."
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "lab": "Lab",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "AI Technology Expert",
+    "subtitle": "Focused on LLM Applications, Agent Development & RAG Systems",
+    "description": "Dedicated to exploring and practicing cutting-edge AI technologies, building intelligent solutions, and driving the application of artificial intelligence in real-world scenarios.",
+    "viewProjects": "View Projects",
+    "techStackTitle": "Tech Stack",
+    "specializationTitle": "Specialization",
+    "techStack": {
+      "languages": "Programming Languages",
+      "frameworks": "Frameworks & Libraries",
+      "aiTools": "AI Tools",
+      "databases": "Databases",
+      "cloud": "Cloud Services"
+    },
+    "specialization": {
+      "llm": {
+        "title": "LLM Applications",
+        "description": "Large Language Model Integration & Application Development"
+      },
+      "agent": {
+        "title": "Agent Development",
+        "description": "Intelligent Agent System Design & Implementation"
+      },
+      "rag": {
+        "title": "RAG Systems",
+        "description": "Retrieval-Augmented Generation System Construction"
+      },
+      "finetuning": {
+        "title": "Model Fine-tuning",
+        "description": "Model Optimization & Customized Training"
+      }
+    }
+  },
+  "projects": {
+    "title": "Technical Projects",
+    "description": "Explore my technical practices in the AI/LLM field, covering large language model applications, intelligent agent development, RAG systems, and model fine-tuning.",
+    "featured": "Featured Projects",
+    "all": "All Projects",
+    "category": "Category",
+    "techStack": "Tech Stack",
+    "viewDetails": "View Details",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "projectCount": "{{count}} projects total",
+    "categories": {
+      "all": "All",
+      "llmApplication": "LLM Applications",
+      "agentDevelopment": "Agent Development",
+      "ragSystem": "RAG Systems",
+      "modelFinetuning": "Model Fine-tuning",
+      "mlInfrastructure": "ML Infrastructure",
+      "openSource": "Open Source",
+      "research": "Research"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "professionalBackground": "Professional Background",
+    "techMethodology": "Technical Methodology",
+    "bestPractices": "Technical Best Practices",
+    "techEvolution": "Technology Stack Evolution",
+    "learningPath": "Learning Path & Technical Growth",
+    "currentFocus": "Current Research Focus",
+    "coreSkills": "Core Skills",
+    "practiceProjects": "Practice Projects",
+    "active": "Active",
+    "exploring": "Exploring",
+    "personalInfo": {
+      "name": "AI Technology Expert",
+      "title": "AI/LLM Application Architect",
+      "bio": "Focused on large language model application development, intelligent Agent system design, and RAG technology practice. Committed to transforming cutting-edge AI technology into practical solutions, helping enterprises and developers build intelligent applications.",
+      "experience": "5+ years AI/ML development experience",
+      "location": "China",
+      "email": "info@caifu.social"
+    },
+    "professionalBackgroundData": {
+      "summary": "Transitioned from traditional software development to the AI field, deeply engaged in large language model application development and intelligent system architecture design. Skilled at transforming complex AI technologies into implementable product solutions, with rich practical experience in LLM applications, Agent development, RAG systems, and other areas.",
+      "highlights": [
+        "Led multiple enterprise-level LLM application projects, serving over 100,000+ users",
+        "Open source projects accumulated 5000+ GitHub Stars",
+        "Published 20+ in-depth technical articles in AI technology communities",
+        "Provided AI technology consulting and architecture design services for multiple enterprises"
+      ]
+    },
+    "techMethodologyData": {
+      "title": "Technical Methodology",
+      "principles": [
+        {
+          "name": "Pragmatism First",
+          "description": "Technology selection is oriented towards solving practical problems, avoiding over-engineering. Choose mature and stable technology stacks to ensure system maintainability and scalability.",
+          "icon": "🎯"
+        },
+        {
+          "name": "Rapid Iteration Validation",
+          "description": "Adopt MVP methods to quickly validate ideas and continuously optimize through user feedback. Value prototype development and A/B testing, data-driven decision making.",
+          "icon": "🚀"
+        },
+        {
+          "name": "Systematic Thinking",
+          "description": "Design system architecture from a global perspective, considering multi-dimensional factors such as performance, security, and cost. Focus on code quality and documentation completeness for team collaboration.",
+          "icon": "🏗️"
+        },
+        {
+          "name": "Continuous Learning Growth",
+          "description": "Maintain curiosity about new technologies, regularly study cutting-edge papers and open source projects. Deepen understanding through practical projects and share experiences to give back to the community.",
+          "icon": "📚"
+        }
+      ]
+    },
+    "bestPracticesData": [
+      {
+        "category": "LLM Application Development",
+        "practices": [
+          "Prompt Engineering: Structured prompt design to improve output quality and stability",
+          "Context Management: Optimize token usage, balance cost and effectiveness",
+          "Error Handling: Implement retry mechanisms and degradation strategies to improve system robustness",
+          "Evaluation System: Establish multi-dimensional evaluation metrics to continuously optimize model performance"
+        ]
+      },
+      {
+        "category": "Agent System Design",
+        "practices": [
+          "Task Decomposition: Break down complex tasks into executable subtasks",
+          "Tool Integration: Design flexible tool calling interfaces that support dynamic expansion",
+          "State Management: Implement reliable state tracking and recovery mechanisms",
+          "Security Control: Set permission boundaries and execution limits to prevent abnormal behavior"
+        ]
+      },
+      {
+        "category": "RAG System Optimization",
+        "practices": [
+          "Document Processing: Intelligent chunking strategies to maintain semantic integrity",
+          "Retrieval Optimization: Hybrid retrieval methods to improve recall and accuracy",
+          "Reranking: Use Cross-Encoder to improve relevance ranking",
+          "Caching Strategy: Implement multi-level caching to reduce latency and cost"
+        ]
+      }
+    ],
+    "techEvolutionData": [
+      {
+        "period": "2018-2019",
+        "focus": "Traditional Web Development",
+        "technologies": ["React", "Node.js", "MongoDB", "AWS"],
+        "milestone": "Built multiple full-stack web applications, accumulated engineering experience"
+      },
+      {
+        "period": "2020-2021",
+        "focus": "Machine Learning Introduction",
+        "technologies": ["Python", "TensorFlow", "scikit-learn", "Pandas"],
+        "milestone": "Completed ML foundation learning, implemented image classification and NLP projects"
+      },
+      {
+        "period": "2022",
+        "focus": "NLP Deep Learning",
+        "technologies": ["PyTorch", "Transformers", "BERT", "GPT-2"],
+        "milestone": "Deep research into Transformer architecture, developed text generation applications"
+      },
+      {
+        "period": "2023",
+        "focus": "LLM Application Development",
+        "technologies": ["GPT-4", "LangChain", "Vector DB", "FastAPI"],
+        "milestone": "Transitioned to LLM application development, built multiple commercial products"
+      },
+      {
+        "period": "2024-Present",
+        "focus": "AI Agent & RAG",
+        "technologies": ["AutoGPT", "LlamaIndex", "Pinecone", "Weaviate"],
+        "milestone": "Focus on Agent systems and RAG technology, exploring AI application boundaries"
+      }
+    ],
+    "learningPathData": [
+      {
+        "phase": "Foundation Stage",
+        "description": "Master programming fundamentals and web development skills",
+        "skills": ["JavaScript/TypeScript", "React Ecosystem", "Node.js Backend", "SQL/NoSQL Databases"],
+        "projects": ["Personal Blog System", "E-commerce Platform", "Real-time Chat Application"]
+      },
+      {
+        "phase": "Machine Learning Stage",
+        "description": "Learn ML fundamental theory and classic algorithms",
+        "skills": ["Python Data Science Stack", "Supervised/Unsupervised Learning", "Feature Engineering", "Model Evaluation"],
+        "projects": ["House Price Prediction", "Sentiment Analysis", "Recommendation System"]
+      },
+      {
+        "phase": "Deep Learning Stage",
+        "description": "Deep dive into neural networks and NLP technology",
+        "skills": ["PyTorch Framework", "CNN/RNN/Transformer", "Transfer Learning", "Model Optimization"],
+        "projects": ["Image Recognition", "Text Classification", "Machine Translation"]
+      },
+      {
+        "phase": "LLM Application Stage",
+        "description": "Master large model application development skills",
+        "skills": ["Prompt Engineering", "LangChain/LlamaIndex", "Vector Database", "API Integration"],
+        "projects": ["Intelligent Customer Service", "Document Q&A", "Code Assistant"]
+      },
+      {
+        "phase": "Advanced Application Stage",
+        "description": "Explore Agent and complex AI systems",
+        "skills": ["Agent Architecture Design", "RAG Optimization", "Multimodal Applications", "Model Fine-tuning"],
+        "projects": ["Autonomous Agent System", "Enterprise Knowledge Base", "Multimodal Search"]
+      }
+    ],
+    "currentFocusData": {
+      "areas": [
+        {
+          "title": "Agent System Architecture",
+          "description": "Research autonomous Agent planning, execution, and reflection mechanisms, explore multi-Agent collaboration patterns",
+          "status": "active"
+        },
+        {
+          "title": "RAG Technology Optimization",
+          "description": "Optimize retrieval-augmented generation systems, improve accuracy and response speed",
+          "status": "active"
+        },
+        {
+          "title": "Model Fine-tuning Practice",
+          "description": "Explore efficient fine-tuning methods (LoRA, QLoRA), adapt to domain-specific tasks",
+          "status": "exploring"
+        },
+        {
+          "title": "Multimodal Applications",
+          "description": "Combine vision and language models to develop image-text understanding applications",
+          "status": "exploring"
+        }
+      ]
+    },
+    "achievementsData": [
+      {
+        "title": "AI Innovation Application Award",
+        "organization": "China AI Conference",
+        "year": "2024",
+        "description": "LLM-based intelligent customer service system won the Best Application Innovation Award",
+        "type": "award"
+      },
+      {
+        "title": "GitHub Star Project",
+        "organization": "GitHub",
+        "year": "2023",
+        "description": "Open source RAG framework gained 5000+ stars, adopted by multiple enterprises",
+        "type": "contribution"
+      },
+      {
+        "title": "AI Technology Summit Speech",
+        "organization": "AI Developer Conference",
+        "year": "2024",
+        "description": "Shared keynote speech on 'Agent System Architecture Design and Practice'",
+        "type": "speaking"
+      },
+      {
+        "title": "LLM Application Best Practices",
+        "organization": "Tech Community",
+        "year": "2023",
+        "description": "Published series of technical articles with over 500,000 total reads",
+        "type": "publication"
+      },
+      {
+        "title": "AWS Machine Learning Expert",
+        "organization": "Amazon Web Services",
+        "year": "2023",
+        "description": "Obtained AWS Machine Learning Specialty certification",
+        "type": "certification"
+      },
+      {
+        "title": "Open Source Community Contributor",
+        "organization": "LangChain/LlamaIndex",
+        "year": "2023",
+        "description": "Contributed code and documentation to mainstream AI frameworks, recognized by the community",
+        "type": "contribution"
+      }
+    ],
+    "certificationsData": [
+      {
+        "name": "AWS Certified Machine Learning - Specialty",
+        "issuer": "Amazon Web Services",
+        "date": "June 2023",
+        "credentialId": "AWS-ML-2023-XXXXX",
+        "verificationUrl": "https://aws.amazon.com/verification"
+      },
+      {
+        "name": "Google Cloud Professional ML Engineer",
+        "issuer": "Google Cloud",
+        "date": "March 2023",
+        "credentialId": "GCP-ML-2023-XXXXX",
+        "verificationUrl": "https://cloud.google.com/certification"
+      },
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "DeepLearning.AI (Coursera)",
+        "date": "August 2022",
+        "credentialId": "DL-SPEC-2022-XXXXX",
+        "verificationUrl": "https://coursera.org/verify"
+      },
+      {
+        "name": "TensorFlow Developer Certificate",
+        "issuer": "TensorFlow",
+        "date": "May 2022",
+        "credentialId": "TF-DEV-2022-XXXXX"
+      }
+    ],
+    "recommendationsData": [
+      {
+        "content": "Demonstrated exceptional technical ability and innovative thinking in LLM application development. The RAG system architecture he designed is elegant and efficient, significantly improving our product's user experience.",
+        "author": "Zhang Wei",
+        "position": "CTO",
+        "company": "AI Startup",
+        "projectContext": "Enterprise Knowledge Base Q&A System"
+      },
+      {
+        "content": "Has deep understanding of AI technology and can transform complex technical concepts into implementable solutions. Showed excellent architectural design capabilities in Agent system development.",
+        "author": "Li Ming",
+        "position": "Technical Director",
+        "company": "Internet Giant",
+        "projectContext": "Intelligent Marketing Agent Platform"
+      },
+      {
+        "content": "Solid technical foundation, high code quality, and comprehensive documentation. Contributions to open source projects helped us solve multiple key technical challenges.",
+        "author": "Sarah Chen",
+        "position": "Senior Engineer",
+        "company": "AI Startup",
+        "projectContext": "LangChain Framework Optimization"
+      },
+      {
+        "content": "Has unique insights in model fine-tuning and Prompt engineering, helping our team quickly master LLM application development best practices.",
+        "author": "Wang Fang",
+        "position": "Product Manager",
+        "company": "EdTech Company",
+        "projectContext": "AI Teaching Assistant"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Welcome to discuss AI technology, project collaboration, or any ideas. I will reply to your message as soon as possible.",
+    "contactMethods": "Contact Methods",
+    "contactDescription": "You can contact me through the following methods. Whether it's technical discussion, project collaboration, or consulting advice, I'm happy to communicate with you.",
+    "sendMessage": "Send Message",
+    "collaborationAreas": "Collaboration Areas",
+    "collaboration": {
+      "llmDevelopment": "LLM Application Development & Architecture Design",
+      "agentSystems": "AI Agent System Development",
+      "ragOptimization": "RAG System Optimization & Implementation",
+      "techConsulting": "Technical Consulting & Training",
+      "openSource": "Open Source Project Collaboration"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "*",
+      "namePlaceholder": "Please enter your name",
+      "emailPlaceholder": "your@email.com",
+      "subjectPlaceholder": "Please enter message subject",
+      "messagePlaceholder": "Please enter what you want to say...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "successMessage": "Thank you for your message, I will reply as soon as possible.",
+      "error": "Send failed",
+      "errorMessage": "Sorry, message sending failed. Please try again later or contact me directly via email."
+    },
+    "validation": {
+      "nameRequired": "Please enter your name",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Please enter subject",
+      "subjectMinLength": "Subject must be at least 3 characters",
+      "messageRequired": "Please enter message content",
+      "messageMinLength": "Message content must be at least 10 characters"
+    },
+    "contactInfo": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "lab": {
+    "title": "Technology Lab",
+    "subtitle": "Explore cutting-edge AI technologies, build innovative solutions, and drive open source ecosystem development",
+    "researchAreas": "Research Areas",
+    "experiments": "Experimental Projects",
+    "openSource": "Open Source Contributions",
+    "openSourceDescription": "Actively participate in the open source community, contribute code to mainstream AI frameworks and tools, and promote the development of the technology ecosystem",
+    "cta": {
+      "title": "Interested in an experimental project?",
+      "description": "Welcome to communicate and explore collaboration possibilities",
+      "contact": "Contact Me"
+    },
+    "categories": {
+      "all": "All",
+      "research": "Research",
+      "prototype": "Prototype",
+      "openSource": "Open Source",
+      "innovation": "Innovation"
+    },
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "archived": "Archived"
+    },
+    "highlights": "Key Highlights",
+    "demo": "Demo",
+    "documentation": "Documentation",
+    "experimentsData": {
+      "exp1": {
+        "title": "Multi-Agent Collaboration Framework",
+        "description": "Explore collaboration mechanisms in multi-agent systems, enabling efficient communication and task allocation between agents. Built on LangChain and AutoGen, supporting dynamic role assignment and task orchestration.",
+        "highlights": {
+          "0": "Support for 10+ dynamic agent role combinations",
+          "1": "Implemented distributed task scheduling algorithms",
+          "2": "Provide visual collaboration process monitoring",
+          "3": "Reduce task completion time by 30%"
+        },
+        "impact": "Adopted by 3 production projects"
+      },
+      "exp2": {
+        "title": "RAG Performance Optimization Toolkit",
+        "description": "Open-source RAG system performance optimization toolkit, including vector retrieval optimization, chunk strategy analysis, recall evaluation, and more. Helps developers quickly diagnose and optimize RAG system performance.",
+        "highlights": {
+          "0": "Provides 5 chunk strategy comparison analysis",
+          "1": "Supports multiple vector database performance testing",
+          "2": "Visualizes recall and accuracy metrics",
+          "3": "Integrated A/B testing framework"
+        },
+        "impact": "Gained 500+ GitHub Stars"
+      },
+      "exp3": {
+        "title": "Prompt Engineering Experiment Platform",
+        "description": "Experimental platform for prompt design, testing, and optimization. Supports multi-model comparison, version management, A/B testing, helping teams systematically optimize prompt effectiveness.",
+        "highlights": {
+          "0": "Supports GPT-4, Claude, Gemini and other models",
+          "1": "Built-in prompt template library and best practices",
+          "2": "Real-time performance and cost analysis",
+          "3": "Team collaboration and version control"
+        }
+      },
+      "exp4": {
+        "title": "Lightweight Vector Database",
+        "description": "Vector database designed for edge devices and small-scale applications, supporting local deployment without external dependencies. Uses innovative indexing algorithms to significantly reduce memory usage while maintaining high performance.",
+        "highlights": {
+          "0": "70% reduction in memory usage",
+          "1": "Support WASM running in browsers",
+          "2": "Millisecond-level query response",
+          "3": "Fully offline available"
+        },
+        "impact": "Suitable for privacy-sensitive scenarios"
+      },
+      "exp5": {
+        "title": "LLM Fine-tuning Automation Pipeline",
+        "description": "End-to-end model fine-tuning automation tool, covering the complete process from data preparation, training, evaluation to deployment. Supports efficient fine-tuning methods like LoRA and QLoRA, integrating MLOps best practices.",
+        "highlights": {
+          "0": "One-click fine-tuning process configuration",
+          "1": "Support distributed training",
+          "2": "Automatic hyperparameter optimization",
+          "3": "Integrated model version management"
+        },
+        "impact": "Helps teams save 60% fine-tuning time"
+      },
+      "exp6": {
+        "title": "AI Code Review Assistant",
+        "description": "LLM-based intelligent code review tool that automatically detects code quality issues, security vulnerabilities, and performance bottlenecks. Supports multiple programming languages and can be integrated into CI/CD processes.",
+        "highlights": {
+          "0": "Identifies 10+ types of code issues",
+          "1": "Provides specific modification suggestions",
+          "2": "Learns team coding style",
+          "3": "Supports custom rules"
+        }
+      }
+    },
+    "researchAreasData": {
+      "multimodal": {
+        "title": "Multimodal AI",
+        "description": "Explore integrated processing of text, images, and audio"
+      },
+      "agentAutonomy": {
+        "title": "Agent Autonomy",
+        "description": "Enhance AI Agent decision-making and learning capabilities"
+      },
+      "knowledgeGraph": {
+        "title": "Knowledge Graph",
+        "description": "Combine symbolic reasoning with neural networks"
+      },
+      "edgeAI": {
+        "title": "Edge AI",
+        "description": "Deploy AI in resource-constrained environments"
+      }
+    },
+    "openSourceData": {
+      "langchain": {
+        "contributions": "Contributed 3 core features and 15+ bug fixes"
+      },
+      "llamaindex": {
+        "contributions": "Optimized vector retrieval performance, improving efficiency by 20%"
+      },
+      "huggingface": {
+        "contributions": "Added new model support and documentation improvements"
+      }
+    }
+  }
+}
